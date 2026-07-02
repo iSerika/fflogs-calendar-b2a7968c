@@ -860,8 +860,14 @@
 
       function applyHostingMode() {
         if (!localServerBacked) {
-          document.getElementById("authButton").title = "ローカルサーバー起動時のみFFLogsログイン認可を実行できます。";
-          document.getElementById("regenerateButton").title = "ローカルサーバー起動時のみFFLogs APIからログを取り込み/再取得できます。";
+          const authButton = document.getElementById("authButton");
+          const regenerateButton = document.getElementById("regenerateButton");
+          authButton.disabled = true;
+          regenerateButton.disabled = true;
+          authButton.textContent = "FFLogs認可（管理者PC専用）";
+          regenerateButton.textContent = "ログ取り込み（管理者PC専用）";
+          authButton.title = "公開ページでは実行できません。固定リーダーのローカル管理画面でのみFFLogsログイン認可を実行できます。";
+          regenerateButton.title = "公開ページでは実行できません。固定リーダーのローカル管理画面でのみFFLogs APIからログを取り込み/再取得できます。";
         }
       }
 
