@@ -50,3 +50,26 @@ jobs:
             git commit -m "Update FFLogs calendar data"
             git push
           fi
+
+      - name: Publish static site branch
+        run: |
+          rm -rf public-dist
+          mkdir -p public-dist/assets public-dist/data
+          cp index.html public-dist/
+          cp robots.txt public-dist/
+          cp .nojekyll public-dist/
+          cp assets/* public-dist/assets/
+          cp data/admin-config.js public-dist/data/
+          cp data/calendar-data.js public-dist/data/
+          cp data/manual-overrides.json public-dist/data/
+          cd public-dist
+          git init
+          git checkout -b gh-pages
+          git config user.name "fflogs-calendar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          git commit -m "Publish static site"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
