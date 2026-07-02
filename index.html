@@ -1,0 +1,1670 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive,noimageindex" />
+    <meta name="referrer" content="no-referrer" />
+    <title>FFLogs固定活動カレンダー</title>
+    <script src="./data/calendar-data.js"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101318;
+        --surface: #171b22;
+        --surface-2: #20262f;
+        --surface-3: #262e39;
+        --line: #36414f;
+        --text: #f3f6fa;
+        --muted: #a9b4c2;
+        --accent: #62c4a5;
+        --accent-2: #79a8ff;
+        --warn: #f0b95d;
+        --bad: #f07676;
+        --good: #8fd46b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          "Segoe UI",
+          "Yu Gothic UI",
+          "Hiragino Sans",
+          sans-serif;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--text);
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        border-color: var(--accent);
+      }
+
+      a {
+        color: var(--accent-2);
+      }
+
+      .app {
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .shell {
+        width: min(1680px, 100%);
+        margin: 0 auto;
+        display: grid;
+        gap: 14px;
+      }
+
+      .topbar,
+      .summary-grid,
+      .main-grid,
+      .analytics-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .topbar {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 14px;
+      }
+
+      .eyebrow {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 4px;
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 15px;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .toolbar button,
+      .toolbar label {
+        min-height: 36px;
+        padding: 0 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--text);
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .toolbar [hidden] {
+        display: none;
+      }
+
+      .view-tabs {
+        display: flex;
+        gap: 8px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 8px;
+      }
+
+      .view-tabs button {
+        min-height: 36px;
+        padding: 0 14px;
+      }
+
+      .view-tabs button.active {
+        border-color: var(--accent);
+        background: #173229;
+        color: var(--text);
+      }
+
+      .view {
+        display: grid;
+        gap: 14px;
+      }
+
+      .view[hidden] {
+        display: none;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .metric,
+      .panel {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 8px;
+      }
+
+      .metric {
+        padding: 12px;
+        min-height: 76px;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 24px;
+      }
+
+      .main-grid {
+        grid-template-columns: minmax(760px, 1fr) 430px;
+        align-items: start;
+      }
+
+      .panel-header {
+        min-height: 52px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .month-controls {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .month-controls button {
+        width: 34px;
+        height: 32px;
+      }
+
+      .calendar {
+        padding: 12px;
+      }
+
+      .weekdays,
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+      }
+
+      .weekdays {
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 8px;
+      }
+
+      .calendar-grid {
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .day-cell {
+        min-height: 146px;
+        padding: 9px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: #141820;
+        text-align: left;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 9px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .day-cell:hover {
+        border-color: #4d5c6e;
+      }
+
+      .day-cell.outside {
+        color: #667283;
+        background: #10141a;
+      }
+
+      .day-cell.has-data {
+        background:
+          linear-gradient(180deg, rgba(98, 196, 165, 0.08), transparent 46%),
+          #182027;
+      }
+
+      .day-cell.selected {
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+      }
+
+      .day-number {
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+        align-items: center;
+      }
+
+      .day-date {
+        color: var(--text);
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 800;
+      }
+
+      .day-try {
+        min-height: 23px;
+        padding: 2px 8px;
+        border-color: rgba(143, 212, 107, 0.38);
+        background: rgba(143, 212, 107, 0.1);
+        color: var(--good);
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .day-body {
+        display: grid;
+        gap: 7px;
+        align-content: start;
+      }
+
+      .cell-line {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .phase {
+        color: #86dfc2;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 1.25;
+      }
+
+      .session-line {
+        color: #c0c9d6;
+        font-size: 12px;
+      }
+
+      .max-line {
+        width: fit-content;
+        max-width: 100%;
+        min-height: 26px;
+        padding: 4px 8px;
+        border: 1px solid rgba(121, 168, 255, 0.32);
+        border-radius: 6px;
+        background: rgba(121, 168, 255, 0.1);
+        color: #d7e3ff;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.25;
+      }
+
+      .report-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 1px;
+      }
+
+      .report-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        min-height: 24px;
+        padding: 3px 8px;
+        border: 1px solid rgba(98, 196, 165, 0.34);
+        border-radius: 6px;
+        background: rgba(98, 196, 165, 0.1);
+        color: #9be7cd;
+        font-size: 11px;
+        font-weight: 800;
+        line-height: 1.35;
+        text-decoration: none;
+      }
+
+      .report-link-icon {
+        width: 18px;
+        height: 9px;
+        object-fit: contain;
+        flex: 0 0 auto;
+      }
+
+      .report-link:hover {
+        border-color: var(--accent);
+        background: rgba(98, 196, 165, 0.18);
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 22px;
+        padding: 2px 7px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface-3);
+        color: var(--muted);
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .chip.good {
+        color: var(--good);
+      }
+
+      .chip.warn {
+        color: var(--warn);
+      }
+
+      .chip.bad {
+        color: var(--bad);
+      }
+
+      .detail {
+        padding: 14px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .day-summary {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .mini {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px;
+        background: #151a22;
+      }
+
+      .mini span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .mini strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 16px;
+      }
+
+      .pull-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      details.pull {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #151a22;
+      }
+
+      details.pull[open] {
+        border-color: #4b5a6d;
+      }
+
+      .pull summary {
+        padding: 10px;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .pull summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .pull-title {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .pull-no {
+        color: var(--muted);
+      }
+
+      .pull-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .pull-body {
+        padding: 0 10px 12px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .death-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 6px;
+      }
+
+      .death-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid #28313d;
+        padding-bottom: 5px;
+        color: var(--muted);
+      }
+
+      .override-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+      }
+
+      .override-row input {
+        min-width: 0;
+        border: 1px solid var(--line);
+        background: #0f1319;
+        color: var(--text);
+        border-radius: 6px;
+        padding: 8px 10px;
+      }
+
+      .override-row button {
+        padding: 0 12px;
+      }
+
+      .analytics-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .analytics-body {
+        padding: 12px 14px;
+      }
+
+      .ranking {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+      }
+
+      .ranking li {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+      }
+
+      .bar-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .bar-row {
+        display: grid;
+        gap: 5px;
+      }
+
+      .bar-row span {
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .bar {
+        height: 8px;
+        border-radius: 999px;
+        background: #0f1319;
+        overflow: hidden;
+      }
+
+      .bar i {
+        display: block;
+        height: 100%;
+        background: var(--accent-2);
+      }
+
+      .graph-panel {
+        padding: 14px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .graph-legend {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: -4px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .legend-line,
+      .legend-dot {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .legend-line::before {
+        content: "";
+        width: 24px;
+        height: 3px;
+        border-radius: 999px;
+        background: #79a8ff;
+      }
+
+      .legend-dot::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        background: #8fd46b;
+        box-shadow: 0 0 0 1px #0f1319;
+      }
+
+      .progress-graph {
+        width: 100%;
+        min-height: 560px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #11161d;
+      }
+
+      .graph-tooltip {
+        min-height: 72px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #151a22;
+        padding: 12px;
+        color: var(--muted);
+      }
+
+      .graph-tooltip strong {
+        color: var(--text);
+      }
+
+      .empty {
+        color: var(--muted);
+        padding: 12px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+      }
+
+      @media (max-width: 1240px) {
+        .summary-grid,
+        .analytics-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .main-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .app {
+          padding: 12px;
+        }
+
+        .topbar {
+          grid-template-columns: 1fr;
+        }
+
+        .toolbar {
+          justify-content: stretch;
+        }
+
+        .toolbar button,
+        .toolbar label {
+          flex: 1;
+          justify-content: center;
+        }
+
+        .summary-grid,
+        .analytics-grid,
+        .day-summary,
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .day-cell {
+          min-height: 128px;
+          padding: 6px;
+        }
+
+        .pull-title {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <div class="shell">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">FFLogs Static Activity Calendar</div>
+            <h1 id="title">FFLogs固定活動カレンダー</h1>
+          </div>
+          <div class="toolbar">
+            <button id="todayButton" type="button" title="今月のカレンダーへ移動します">今月へ移動</button>
+            <button id="authButton" type="button" title="Personal Logs取得用にFFLogsへログイン認可します">FFLogsログイン認可</button>
+            <button id="regenerateButton" type="button" title="登録済みreportをFFLogs APIから取り込み/再取得してカレンダーを更新します">ログを取り込み/再取得</button>
+            <button id="exportOverridesButton" type="button" title="手修正した全滅原因ラベルをJSONとして書き出します">手修正を書き出し</button>
+            <label>
+              手修正を読み込み<input id="importOverridesInput" hidden type="file" accept=".json,application/json" />
+            </label>
+          </div>
+        </header>
+
+        <nav class="view-tabs" aria-label="表示切替">
+          <button class="active" id="calendarTabButton" type="button" data-view-tab="calendar">カレンダー</button>
+          <button id="progressTabButton" type="button" data-view-tab="progress">進捗グラフ</button>
+        </nav>
+
+        <section class="view" id="calendarView">
+          <section class="summary-grid" id="summaryGrid"></section>
+
+          <section class="main-grid">
+            <section class="panel">
+              <div class="panel-header">
+                <h2 id="monthTitle">----</h2>
+                <div class="month-controls">
+                  <button id="prevMonthButton" type="button" aria-label="前月">‹</button>
+                  <button id="nextMonthButton" type="button" aria-label="翌月">›</button>
+                </div>
+              </div>
+              <div class="calendar">
+                <div class="weekdays">
+                  <div>日</div>
+                  <div>月</div>
+                  <div>火</div>
+                  <div>水</div>
+                  <div>木</div>
+                  <div>金</div>
+                  <div>土</div>
+                </div>
+                <div class="calendar-grid" id="calendarGrid"></div>
+              </div>
+            </section>
+
+            <aside class="panel">
+              <div class="panel-header">
+                <h2 id="detailTitle">日別詳細</h2>
+                <span class="chip" id="generatedAt">未生成</span>
+              </div>
+              <div class="detail" id="dayDetail"></div>
+            </aside>
+          </section>
+
+          <section class="analytics-grid" id="analyticsGrid"></section>
+        </section>
+
+        <section class="view" id="progressView" hidden>
+          <section class="panel">
+            <div class="panel-header">
+              <h2>進捗グラフ</h2>
+              <span class="chip">全期間 / フェーズ別 % vs pull</span>
+            </div>
+            <div class="graph-panel">
+              <div class="graph-legend" aria-hidden="true">
+                <span class="legend-line">Best推移</span>
+                <span class="legend-dot">更新</span>
+              </div>
+              <div id="progressGraph" class="progress-graph"></div>
+              <div id="progressTooltip" class="graph-tooltip">点を選択するとpull詳細を表示します。</div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const data = window.FFLOGS_CALENDAR_DATA || { days: [], analytics: {}, source: {}, target: {} };
+      const dayMap = new Map((data.days || []).map((day) => [day.date, day]));
+      const reportLinksByDate = buildReportLinksByDate(data.days || []);
+      const overrideStorageKey = "fflogs-calendar-manual-overrides-v1";
+      const causeLabels = {
+        damage_down: "与ダメージ低下あり",
+        first_death: "初回死亡起点",
+        mass_deaths: "同時多発死亡",
+        late_wipe: "終盤崩れ",
+        enrage_or_timeout: "時間切れ/ログ終端",
+        manual: "手動分類",
+        unknown: "未分類",
+      };
+
+      let overrides = readOverrides();
+      let serverBackedOverrides = false;
+      let selectedDate = pickInitialDate();
+      let currentMonth = selectedDate ? selectedDate.slice(0, 7) : toMonthKey(new Date());
+      let activeView = "calendar";
+      const localServerBacked = isLocalServerBacked();
+
+      const elements = {
+        title: document.getElementById("title"),
+        summaryGrid: document.getElementById("summaryGrid"),
+        monthTitle: document.getElementById("monthTitle"),
+        calendarGrid: document.getElementById("calendarGrid"),
+        dayDetail: document.getElementById("dayDetail"),
+        detailTitle: document.getElementById("detailTitle"),
+        generatedAt: document.getElementById("generatedAt"),
+        analyticsGrid: document.getElementById("analyticsGrid"),
+        calendarView: document.getElementById("calendarView"),
+        progressView: document.getElementById("progressView"),
+        progressGraph: document.getElementById("progressGraph"),
+        progressTooltip: document.getElementById("progressTooltip"),
+      };
+
+      document.querySelectorAll("[data-view-tab]").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeView = button.getAttribute("data-view-tab");
+          render();
+        });
+      });
+
+      document.getElementById("prevMonthButton").addEventListener("click", () => {
+        currentMonth = shiftMonth(currentMonth, -1);
+        render();
+      });
+
+      document.getElementById("nextMonthButton").addEventListener("click", () => {
+        currentMonth = shiftMonth(currentMonth, 1);
+        render();
+      });
+
+      document.getElementById("todayButton").addEventListener("click", () => {
+        currentMonth = toMonthKey(new Date());
+        selectedDate = toDateKey(new Date());
+        render();
+      });
+
+      document.getElementById("exportOverridesButton").addEventListener("click", exportOverrides);
+      document.getElementById("importOverridesInput").addEventListener("change", importOverrides);
+      document.getElementById("regenerateButton").addEventListener("click", regenerateFromFflogs);
+      document.getElementById("authButton").addEventListener("click", () => {
+        if (!localServerBacked) {
+          alert("FFLogs認可はローカルサーバー起動時に使えます。READMEの npm run serve を使ってください。");
+          return;
+        }
+        location.href = "./auth/start";
+      });
+
+      bootstrap();
+
+      async function bootstrap() {
+        applyHostingMode();
+        await loadServerOverrides();
+        render();
+      }
+
+      function applyHostingMode() {
+        if (!localServerBacked) {
+          document.getElementById("authButton").title = "ローカルサーバー起動時のみFFLogsログイン認可を実行できます。";
+          document.getElementById("regenerateButton").title = "ローカルサーバー起動時のみFFLogs APIからログを取り込み/再取得できます。";
+        }
+      }
+
+      function render() {
+        elements.title.textContent = `${data.target?.name || "FFLogs"} 固定活動カレンダー`;
+        elements.generatedAt.textContent = data.generatedAt ? `生成: ${formatDateTime(data.generatedAt)}` : "未生成";
+        renderSummary();
+        renderCalendar();
+        renderDayDetail();
+        renderAnalytics();
+        renderProgressGraph();
+        renderActiveView();
+      }
+
+      function renderActiveView() {
+        elements.calendarView.hidden = activeView !== "calendar";
+        elements.progressView.hidden = activeView !== "progress";
+        document.querySelectorAll("[data-view-tab]").forEach((button) => {
+          button.classList.toggle("active", button.getAttribute("data-view-tab") === activeView);
+        });
+      }
+
+      function renderSummary() {
+        const analytics = data.analytics || {};
+        const days = data.days || [];
+        const deepest = days.reduce((best, day) => {
+          if (!best || (day.deepestPhase?.rank || 0) > (best.rank || 0)) return day.deepestPhase;
+          return best;
+        }, null);
+        const bestDay = days.reduce((best, day) => (isDayDeeper(day, best) ? day : best), null);
+        const activeMs = analytics.totalActiveFightDurationMs || sum(days.map((day) => day.activeFightDurationMs || 0));
+
+        elements.summaryGrid.innerHTML = [
+          metric("活動日", `${analytics.totalDays || days.length}日`),
+          metric("総トライ", `${analytics.totalPulls || sum(days.map((day) => day.pullCount || 0))}回`),
+          metric("最深フェーズ", deepest?.label || "-"),
+          metric("ベスト残HP", formatBestPull(bestDay?.bestPull || null)),
+          metric("総実戦時間", formatDuration(activeMs)),
+        ].join("");
+      }
+
+      function renderCalendar() {
+        const [year, month] = currentMonth.split("-").map(Number);
+        const first = new Date(year, month - 1, 1);
+        const start = new Date(first);
+        start.setDate(first.getDate() - first.getDay());
+        elements.monthTitle.textContent = `${year}年${month}月`;
+        elements.calendarGrid.innerHTML = "";
+
+        for (let i = 0; i < 42; i += 1) {
+          const date = new Date(start);
+          date.setDate(start.getDate() + i);
+          const key = toDateKey(date);
+          const day = dayMap.get(key);
+          const cell = document.createElement("div");
+          cell.setAttribute("role", "button");
+          cell.dataset.date = key;
+          cell.tabIndex = 0;
+          cell.className = [
+            "day-cell",
+            date.getMonth() + 1 === month ? "" : "outside",
+            day ? "has-data" : "",
+            key === selectedDate ? "selected" : "",
+          ]
+            .filter(Boolean)
+            .join(" ");
+          const selectDay = () => {
+            selectedDate = key;
+            currentMonth = key.slice(0, 7);
+            render();
+          };
+          cell.addEventListener("click", selectDay);
+          cell.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              selectDay();
+            }
+          });
+
+          cell.innerHTML = `
+            <div class="day-number">
+              <strong class="day-date">${date.getDate()}</strong>
+              ${day ? `<span class="chip day-try">${day.pullCount} try</span>` : ""}
+            </div>
+            <div class="day-body">
+              ${
+                day
+                  ? `
+                    <div class="cell-line phase">${escapeHtml(day.deepestPhase?.label || "-")}</div>
+                    <div class="cell-line session-line">活動 ${formatDuration(day.activityDurationMs)}</div>
+                    <div class="cell-line max-line">max ${formatPhaseShort(day.bestPull?.phase || day.deepestPhase)} 残り${formatPercent(day.bestBossHpRemainingPercent)}</div>
+                    <div class="report-links">${renderReportLinks(day)}</div>
+                  `
+                  : `<div class="cell-line">活動なし</div>`
+              }
+            </div>
+          `;
+          cell.querySelectorAll(".report-link").forEach((link) => {
+            link.addEventListener("click", (event) => event.stopPropagation());
+          });
+          elements.calendarGrid.appendChild(cell);
+        }
+      }
+
+      function renderDayDetail() {
+        const day = selectedDate ? dayMap.get(selectedDate) : null;
+        elements.detailTitle.textContent = day ? `${selectedDate} の活動` : `${selectedDate || "-"} の活動`;
+
+        if (!day) {
+          elements.dayDetail.innerHTML = `<div class="empty">この日のFFLogs活動データはありません。</div>`;
+          return;
+        }
+
+        elements.dayDetail.innerHTML = `
+          <section class="day-summary">
+            ${mini("トライ", `${day.pullCount}回`)}
+            ${mini("最深", escapeHtml(day.deepestPhase?.label || "-"))}
+            ${mini("Best", escapeHtml(formatBestPull(day.bestPull)))}
+            ${mini("活動時間", formatDuration(day.activityDurationMs))}
+            ${mini("実戦/相談", `${formatDuration(day.activeFightDurationMs)} / ${formatDuration(day.downtimeMs)}`)}
+            ${mini("活動帯", `${formatTime(day.firstPullAt)} - ${formatTime(day.lastPullEndedAt)}`)}
+          </section>
+          <section>
+            <h3>全滅原因</h3>
+            <div class="chip-row" style="margin-top:8px">${renderCauseChips(day.wipeCauseSummary, 99)}</div>
+          </section>
+          <section class="pull-list">
+            ${day.pulls.map((pull, index) => renderPull(pull, index)).join("")}
+          </section>
+        `;
+
+        elements.dayDetail.querySelectorAll("[data-save-override]").forEach((button) => {
+          button.addEventListener("click", async () => {
+            const id = button.getAttribute("data-save-override");
+            const input = elements.dayDetail.querySelector(`[data-override-input="${cssEscape(id)}"]`);
+            await setOverride(id, input?.value || "");
+            render();
+          });
+        });
+      }
+
+      function renderPull(pull, index) {
+        const manual = getOverride(pull.id);
+        const label = manual || pull.wipeCause?.manualLabel || pull.wipeCause?.label || causeLabels[pull.wipeCause?.category] || "-";
+        const firstDeath = pull.firstDeath?.name || "-";
+        const deathItems = (pull.deathChain || [])
+          .map(
+            (death) => `
+              <li>
+                <span>${escapeHtml(death.name || "-")}</span>
+                <span>${formatRelative(death.relativeMs)} / ${formatTime(death.timestamp)}</span>
+              </li>
+            `,
+          )
+          .join("");
+        const damageDownItems = (pull.damageDownSummary || [])
+          .map((row) => `<li><span>${escapeHtml(row.name || "-")}</span><span>${row.count}回</span></li>`)
+          .join("");
+
+        return `
+          <details class="pull">
+            <summary>
+              <div class="pull-title">
+                <strong class="pull-no">#${index + 1}</strong>
+                <div>
+                  <strong>${escapeHtml(pull.phase?.label || "-")}</strong>
+                  <div class="pull-meta">
+                    <span class="chip">${formatTime(pull.startedAt)}</span>
+                    <span class="chip">${formatDuration(pull.durationMs)}</span>
+                    <span class="chip ${pull.kill ? "good" : "warn"}">${pull.kill ? "Kill" : "Wipe"}</span>
+                    <span class="chip">残HP ${formatPercent(pull.bossHpRemainingPercent)}</span>
+                    <span class="chip">到達 ${formatPercent(pull.progressPercent)}</span>
+                  </div>
+                </div>
+                <span class="chip ${manual ? "good" : ""}">${escapeHtml(label)}</span>
+              </div>
+            </summary>
+            <div class="pull-body">
+              <div class="info-grid">
+                ${mini("Report / Fight", `${escapeHtml(pull.reportCode)} / ${pull.fightId}`)}
+                ${mini("First Death", escapeHtml(firstDeath))}
+                ${mini("残HP / 到達", `${formatPercent(pull.bossHpRemainingPercent)} / ${formatPercent(pull.progressPercent)}`)}
+                ${mini("フェーズ根拠", escapeHtml(pull.phaseSource || pull.phase?.source || "-"))}
+                ${mini("Damage Down", `${(pull.damageDownEvents || []).length}回`)}
+                ${mini("推定理由", escapeHtml(pull.wipeCause?.reason || "-"))}
+                ${mini("信頼度", `${Math.round((pull.wipeCause?.confidence || 0) * 100)}%`)}
+              </div>
+              <div>
+                <h3>与ダメージ低下</h3>
+                ${
+                  damageDownItems
+                    ? `<ul class="death-list" style="margin-top:8px">${damageDownItems}</ul>`
+                    : `<div class="empty" style="margin-top:8px">Damage Down付与は検出されていません。</div>`
+                }
+              </div>
+              <div>
+                <h3>死亡順</h3>
+                ${
+                  deathItems
+                    ? `<ul class="death-list" style="margin-top:8px">${deathItems}</ul>`
+                    : `<div class="empty" style="margin-top:8px">死亡イベントは取得されていません。</div>`
+                }
+              </div>
+              <div class="override-row">
+                <input data-override-input="${escapeHtml(pull.id)}" value="${escapeAttr(manual)}" placeholder="手修正ラベル例: P2 ミッシング 散開ミス" />
+                <button type="button" data-save-override="${escapeHtml(pull.id)}">反映</button>
+              </div>
+              <a href="${escapeAttr(pull.fflogsUrl)}" target="_blank" rel="noreferrer">FFLogsで開く</a>
+            </div>
+          </details>
+        `;
+      }
+
+      function renderAnalytics() {
+        const analytics = data.analytics || {};
+        const firstDeathRanking = analytics.firstDeathRanking || [];
+        const wipeCauseRanking = analytics.wipeCauseRanking || [];
+        const phaseTrend = analytics.phaseTrend || [];
+
+        elements.analyticsGrid.innerHTML = [
+          analyticsPanel(
+            "First Death",
+            firstDeathRanking.length
+              ? `<ol class="ranking">${firstDeathRanking
+                  .map((row) => `<li><span>${escapeHtml(row.name)}</span><strong>${row.count}</strong></li>`)
+                  .join("")}</ol>`
+              : `<div class="empty">データなし</div>`,
+          ),
+          analyticsPanel(
+            "Wipe原因",
+            wipeCauseRanking.length
+              ? `<ol class="ranking">${wipeCauseRanking
+                  .map((row) => `<li><span>${escapeHtml(row.label || causeLabels[row.category] || row.category)}</span><strong>${row.count}</strong></li>`)
+                  .join("")}</ol>`
+              : `<div class="empty">データなし</div>`,
+          ),
+          analyticsPanel(
+            "到達推移",
+            phaseTrend.length
+              ? `<div class="bar-list">${phaseTrend
+                  .map(
+                    (row) => `
+                      <div class="bar-row">
+                        <span><b>${escapeHtml(row.date)}</b><b>${escapeHtml(row.phase)} / ${formatPercent(row.bestProgressPercent)}</b></span>
+                        <div class="bar"><i style="width:${Math.max(0, Math.min(100, row.bestProgressPercent || 0))}%"></i></div>
+                      </div>
+                    `,
+                  )
+                  .join("")}</div>`
+              : `<div class="empty">データなし</div>`,
+          ),
+        ].join("");
+      }
+
+      function renderProgressGraph() {
+        const points = getProgressPoints();
+        if (!points.length) {
+          elements.progressGraph.innerHTML = `<div class="empty">進捗グラフ用データがありません。</div>`;
+          return;
+        }
+
+        const width = 1500;
+        const height = 560;
+        const padding = { top: 44, right: 44, bottom: 72, left: 160 };
+        const plotWidth = width - padding.left - padding.right;
+        const plotHeight = height - padding.top - padding.bottom;
+        const innerXPad = 36;
+        const xStart = padding.left + innerXPad;
+        const xEnd = padding.left + plotWidth - innerXPad;
+        const xWidth = Math.max(1, xEnd - xStart);
+        const maxRank = Math.max(5, ...points.map((point) => point.phaseRank || point.phase?.rank || 0));
+        const phaseLabels = buildPhaseLabels(points);
+        const dateStats = buildDateStats(points);
+        const dateSpan = Math.max(1, dateStats.dates.length - 1);
+        const dayWidth = xWidth / dateSpan;
+        const xForDate = (date) => xStart + ((dateStats.indexByDate.get(date) || 0) / dateSpan) * xWidth;
+        const xForPoint = (point) => {
+          const stat = dateStats.byDate.get(point.date) || { count: 1 };
+          const slot = stat.count <= 1 ? 0.5 : (point.dayPullIndex + 1) / (stat.count + 1);
+          const spread = Math.min(dayWidth * 0.48, 28);
+          const x = xForDate(point.date) + (slot - 0.5) * spread;
+          return clamp(x, padding.left + 16, padding.left + plotWidth - 16);
+        };
+        const scoreFor = (rank, hp) => Math.max(0, Number(rank || 0) - 1) + (100 - clamp(Number(hp ?? 100), 0, 100)) / 100;
+        const yForScore = (score) => padding.top + (score / maxRank) * plotHeight;
+        const yFor = (rank, hp) => yForScore(scoreFor(rank, hp));
+        const dateLines = dateStats.dates.map((date) => ({
+          date,
+          x: xForDate(date),
+          cumulativePulls: dateStats.byDate.get(date)?.cumulativePulls || 0,
+        }));
+
+        const bestPath = points
+          .map((point) => {
+            const x = xForPoint(point);
+            const y = yFor(point.bestPhaseRank || point.phaseRank, point.bestBossHpRemainingPercent ?? point.bossHpRemainingPercent);
+            return `${point.pullNumber === 1 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)}`;
+          })
+          .join(" ");
+
+        elements.progressGraph.innerHTML = `
+          <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="フェーズ別進捗グラフ">
+            <rect x="0" y="0" width="${width}" height="${height}" fill="#11161d"></rect>
+            <text x="${padding.left - 100}" y="24" fill="#f1f5fb" font-size="12" font-weight="800">累計pull</text>
+            ${phaseLabels
+              .map((phase) => {
+                const yTop = yForScore(phase.rank);
+                const yBottom = yForScore(phase.rank - 1);
+                const bandY = Math.min(yTop, yBottom);
+                const bandHeight = Math.abs(yBottom - yTop);
+                return `
+                  <rect x="${padding.left}" y="${bandY}" width="${plotWidth}" height="${bandHeight}" fill="${phase.rank % 2 ? "#151c24" : "#121820"}"></rect>
+                  <text x="${padding.left - 14}" y="${bandY + 22}" fill="#a9b4c2" font-size="13" text-anchor="end">${escapeHtml(phase.label)}</text>
+                  <line x1="${padding.left}" y1="${bandY}" x2="${padding.left + plotWidth}" y2="${bandY}" stroke="#2a3441" stroke-width="1"></line>
+                `;
+              })
+              .join("")}
+            ${dateLines
+              .map(
+                (line) => `
+                  <line x1="${line.x.toFixed(2)}" y1="${padding.top}" x2="${line.x.toFixed(2)}" y2="${height - padding.bottom}" stroke="#26313d" stroke-width="1"></line>
+                  <text x="${line.x.toFixed(2)}" y="24" fill="#c7d1df" font-size="10.5" text-anchor="middle">${line.cumulativePulls}</text>
+                  <text x="${(line.x + 4).toFixed(2)}" y="${height - 30}" fill="#748092" font-size="11">${escapeHtml(line.date.slice(5))}</text>
+                `,
+              )
+              .join("")}
+            <line x1="${padding.left}" y1="${height - padding.bottom}" x2="${padding.left + plotWidth}" y2="${height - padding.bottom}" stroke="#4b5a6d" stroke-width="1.5"></line>
+            <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height - padding.bottom}" stroke="#4b5a6d" stroke-width="1.5"></line>
+            <text x="20" y="${padding.top + plotHeight / 2}" fill="#f1f5fb" font-size="13" transform="rotate(-90 20 ${padding.top + plotHeight / 2})">Progress</text>
+            <text x="${padding.left + plotWidth / 2}" y="${height - 10}" fill="#f1f5fb" font-size="13" text-anchor="middle">Activity date</text>
+            <path d="${bestPath}" fill="none" stroke="#79a8ff" stroke-width="3" opacity="0.95"></path>
+            ${points
+              .filter((point) => point.bestPullId && point.bestPullId === `${point.reportCode}-${point.fightId}`)
+              .map((point) => {
+                const x = xForPoint(point);
+                const y = yFor(point.phaseRank || point.phase?.rank, point.bossHpRemainingPercent);
+                return `<circle data-point-index="${point.pullNumber - 1}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="5.5" fill="#8fd46b" stroke="#0f1319" stroke-width="1.5"></circle>`;
+              })
+              .join("")}
+          </svg>
+        `;
+
+        elements.progressGraph.querySelectorAll("[data-point-index]").forEach((node) => {
+          node.addEventListener("click", () => {
+            const point = points[Number(node.getAttribute("data-point-index"))];
+            elements.progressTooltip.innerHTML = `
+              <strong>#${point.pullNumber} ${escapeHtml(point.date)} ${escapeHtml(point.phase?.label || "-")}</strong><br>
+              Fight ${escapeHtml(point.reportCode)} / ${point.fightId}　
+              残HP ${formatPercent(point.bossHpRemainingPercent)} / 到達 ${formatPercent(point.progressPercent)}　
+              ${formatDuration(point.durationMs)}<br>
+              <a href="${escapeAttr(point.fflogsUrl)}" target="_blank" rel="noreferrer">FFLogsで開く</a>
+            `;
+          });
+        });
+      }
+
+      function getProgressPoints() {
+        const fromAnalytics = data.analytics?.progressGraph?.points;
+        if (Array.isArray(fromAnalytics) && fromAnalytics.length) return fromAnalytics;
+
+        const points = [];
+        let best = null;
+        let pullNumber = 0;
+        for (const day of data.days || []) {
+          for (const pull of day.pulls || []) {
+            pullNumber += 1;
+            best = isPullDeeper(pull, best) ? pull : best;
+            points.push({
+              ...pull,
+              pullNumber,
+              date: day.date,
+              phaseRank: pull.phase?.rank || 0,
+              bestPhaseRank: best?.phase?.rank || 0,
+              bestBossHpRemainingPercent: best?.bossHpRemainingPercent ?? null,
+              bestPullId: best?.id || "",
+            });
+          }
+        }
+        return points;
+      }
+
+      function buildPhaseLabels(points) {
+        const phases = new Map([
+          [1, "P1 ケフカ"],
+          [2, "P2 ゴッドケフカ"],
+          [3, "P3 エクスデス カオス"],
+          [4, "P4 ネオエクスデス カオス"],
+          [5, "P5 最終フェーズ"],
+        ]);
+        for (const point of points) {
+          if (point.phase?.rank) phases.set(point.phase.rank, point.phase.label || `P${point.phase.rank}`);
+        }
+        return [...phases.entries()]
+          .sort((a, b) => a[0] - b[0])
+          .map(([rank, label]) => ({ rank, label }));
+      }
+
+      function buildDateStats(points) {
+        const byDate = new Map();
+        for (const point of points) {
+          const stat = byDate.get(point.date) || { count: 0 };
+          point.dayPullIndex = stat.count;
+          stat.count += 1;
+          byDate.set(point.date, stat);
+        }
+        let cumulativePulls = 0;
+        const dates = [...byDate.keys()].sort();
+        for (const date of dates) {
+          const stat = byDate.get(date);
+          cumulativePulls += stat.count;
+          stat.cumulativePulls = cumulativePulls;
+        }
+        return {
+          byDate,
+          indexByDate: new Map(dates.map((date, index) => [date, index])),
+          dates,
+        };
+      }
+
+      function analyticsPanel(title, body) {
+        return `
+          <section class="panel">
+            <div class="panel-header"><h2>${escapeHtml(title)}</h2></div>
+            <div class="analytics-body">${body}</div>
+          </section>
+        `;
+      }
+
+      function renderCauseChips(summary, limit) {
+        const rows = Object.entries(summary || {})
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, limit);
+        if (!rows.length) return `<span class="chip">原因なし</span>`;
+        return rows
+          .map(([category, count]) => `<span class="chip warn">${escapeHtml(causeLabels[category] || category)} ${count}</span>`)
+          .join("");
+      }
+
+      function renderReportLinks(day) {
+        const reports = reportLinksByDate.get(day?.date) || [];
+        return reports
+          .map((report, index) => {
+            const label = reports.length === 1 ? "FFLogs" : `FFLogs ${index + 1}`;
+            return `<a class="report-link" href="${escapeAttr(report.url)}" target="_blank" rel="noreferrer" title="${escapeAttr(report.code)}"><img class="report-link-icon" src="./assets/FF_White_e4483a4135.png" alt="" loading="lazy" decoding="async"><span>${escapeHtml(label)}</span></a>`;
+          })
+          .join("");
+      }
+
+      function buildReportLinksByDate(days) {
+        const reportSummaries = summarizeReports(days);
+        const grouped = new Map();
+
+        for (const report of reportSummaries) {
+          if (!report.primaryDate) continue;
+          if (!grouped.has(report.primaryDate)) grouped.set(report.primaryDate, []);
+          grouped.get(report.primaryDate).push(report);
+        }
+
+        const linksByDate = new Map();
+        for (const [date, reports] of grouped.entries()) {
+          const selected = pruneCoveredReports(reports)
+            .sort((a, b) => a.firstMs - b.firstMs)
+            .map((report) => ({
+              code: report.code,
+              url: report.url,
+              firstMs: report.firstMs,
+              lastMs: report.lastMs,
+              pullCount: report.pullCount,
+            }));
+          linksByDate.set(date, selected);
+        }
+
+        return linksByDate;
+      }
+
+      function summarizeReports(days) {
+        const reports = new Map();
+
+        for (const day of days || []) {
+          for (const pull of day?.pulls || []) {
+            const code = pull.reportCode || extractReportCodeFromUrl(pull.fflogsUrl);
+            if (!code) continue;
+
+            const startMs = toTimeMs(pull.startedAt);
+            const endMs = toTimeMs(pull.endedAt);
+            const durationMs = Number.isFinite(pull.durationMs) ? pull.durationMs : Math.max(0, endMs - startMs);
+            const activityDate = pull.activityDate || day.date;
+
+            if (!reports.has(code)) {
+              reports.set(code, {
+                code,
+                url: `https://www.fflogs.com/reports/${code}`,
+                firstMs: startMs,
+                lastMs: endMs,
+                activeMs: 0,
+                pullCount: 0,
+                dayStats: new Map(),
+              });
+            }
+
+            const report = reports.get(code);
+            report.firstMs = Math.min(report.firstMs, startMs);
+            report.lastMs = Math.max(report.lastMs, endMs);
+            report.activeMs += Math.max(0, durationMs);
+            report.pullCount += 1;
+
+            if (!report.dayStats.has(activityDate)) {
+              report.dayStats.set(activityDate, {
+                date: activityDate,
+                firstMs: startMs,
+                lastMs: endMs,
+                activeMs: 0,
+                pullCount: 0,
+              });
+            }
+
+            const stat = report.dayStats.get(activityDate);
+            stat.firstMs = Math.min(stat.firstMs, startMs);
+            stat.lastMs = Math.max(stat.lastMs, endMs);
+            stat.activeMs += Math.max(0, durationMs);
+            stat.pullCount += 1;
+          }
+        }
+
+        return [...reports.values()].map((report) => ({
+          ...report,
+          primaryDate: pickPrimaryReportDate(report.dayStats),
+          spanMs: Math.max(0, report.lastMs - report.firstMs),
+        }));
+      }
+
+      function pickPrimaryReportDate(dayStats) {
+        return [...dayStats.values()]
+          .sort((a, b) => {
+            if (b.activeMs !== a.activeMs) return b.activeMs - a.activeMs;
+            if (b.pullCount !== a.pullCount) return b.pullCount - a.pullCount;
+            return a.date.localeCompare(b.date);
+          })[0]?.date || "";
+      }
+
+      function pruneCoveredReports(reports) {
+        const selected = [];
+        const sorted = [...reports].sort((a, b) => {
+          const aSpan = Math.max(a.spanMs, a.activeMs);
+          const bSpan = Math.max(b.spanMs, b.activeMs);
+          if (bSpan !== aSpan) return bSpan - aSpan;
+          if (b.activeMs !== a.activeMs) return b.activeMs - a.activeMs;
+          return b.pullCount - a.pullCount;
+        });
+
+        for (const report of sorted) {
+          const reportSpan = Math.max(1, report.spanMs, report.activeMs);
+          const coveredBySelected = selected.some((kept) => {
+            const overlap = getOverlapMs(report, kept);
+            const overlapRatio = overlap / reportSpan;
+            const mostlyContained = overlapRatio >= 0.75;
+            const sameStart = Math.abs(report.firstMs - kept.firstMs) <= 5 * 60 * 1000;
+            const shorter = reportSpan < Math.max(kept.spanMs, kept.activeMs);
+            return mostlyContained || (sameStart && shorter && overlapRatio >= 0.5);
+          });
+          if (!coveredBySelected) selected.push(report);
+        }
+
+        return selected;
+      }
+
+      function getOverlapMs(a, b) {
+        const start = Math.max(a.firstMs, b.firstMs);
+        const end = Math.min(a.lastMs, b.lastMs);
+        return Math.max(0, end - start);
+      }
+
+      function toTimeMs(value) {
+        const ms = Date.parse(value || "");
+        return Number.isFinite(ms) ? ms : 0;
+      }
+
+      function extractReportCodeFromUrl(url) {
+        const match = String(url || "").match(/\/reports\/([^/?#]+)/);
+        return match ? match[1] : "";
+      }
+
+      function readOverrides() {
+        try {
+          return JSON.parse(localStorage.getItem(overrideStorageKey) || "{}");
+        } catch {
+          return {};
+        }
+      }
+
+      function getOverride(id) {
+        return overrides[id]?.manualLabel || "";
+      }
+
+      async function loadServerOverrides() {
+        if (!localServerBacked) return;
+        try {
+          const response = await fetch("./api/overrides", { cache: "no-store" });
+          if (!response.ok) return;
+          const payload = await response.json();
+          overrides = payload.overrides || {};
+          serverBackedOverrides = true;
+          localStorage.setItem(overrideStorageKey, JSON.stringify(overrides, null, 2));
+        } catch {
+          serverBackedOverrides = false;
+        }
+      }
+
+      async function setOverride(id, value) {
+        if (!value.trim()) {
+          delete overrides[id];
+        } else {
+          overrides[id] = {
+            manualLabel: value.trim(),
+            updatedAt: new Date().toISOString(),
+          };
+        }
+        localStorage.setItem(overrideStorageKey, JSON.stringify(overrides, null, 2));
+        if (serverBackedOverrides) {
+          await persistServerOverrides();
+        }
+      }
+
+      async function persistServerOverrides() {
+        if (!localServerBacked) return;
+        const response = await fetch("./api/overrides", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            version: 1,
+            updatedAt: new Date().toISOString(),
+            overrides,
+          }),
+        });
+        if (!response.ok) {
+          throw new Error(await response.text());
+        }
+      }
+
+      function exportOverrides() {
+        const payload = {
+          version: 1,
+          updatedAt: new Date().toISOString(),
+          overrides,
+        };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = "manual-overrides.json";
+        anchor.click();
+        URL.revokeObjectURL(url);
+      }
+
+      async function importOverrides(event) {
+        const file = event.target.files?.[0];
+        if (!file) return;
+        const payload = JSON.parse(await file.text());
+        overrides = payload.overrides || payload || {};
+        localStorage.setItem(overrideStorageKey, JSON.stringify(overrides, null, 2));
+        if (serverBackedOverrides) {
+          await persistServerOverrides();
+        }
+        event.target.value = "";
+        render();
+      }
+
+      async function regenerateFromFflogs() {
+        if (!localServerBacked) {
+          alert("FFLogs再取得はローカルサーバー起動時に使えます。READMEの npm run serve を使ってください。");
+          return;
+        }
+        const button = document.getElementById("regenerateButton");
+        button.disabled = true;
+        button.textContent = "取得中...";
+        try {
+          const response = await fetch("./api/regenerate", { method: "POST" });
+          if (!response.ok) throw new Error(await response.text());
+          location.reload();
+        } catch (error) {
+          alert(`FFLogs再取得に失敗しました: ${error.message}`);
+        } finally {
+          button.disabled = false;
+          button.textContent = "ログを取り込み/再取得";
+        }
+      }
+
+      function pickInitialDate() {
+        const days = [...dayMap.keys()].sort();
+        return days[days.length - 1] || toDateKey(new Date());
+      }
+
+      function shiftMonth(monthKey, delta) {
+        const [year, month] = monthKey.split("-").map(Number);
+        const date = new Date(year, month - 1 + delta, 1);
+        return toMonthKey(date);
+      }
+
+      function toMonthKey(date) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+      }
+
+      function toDateKey(date) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+      }
+
+      function formatDuration(ms) {
+        if (!Number.isFinite(ms) || ms <= 0) return "0m";
+        const totalMinutes = Math.round(ms / 60000);
+        const hours = Math.floor(totalMinutes / 60);
+        const minutes = totalMinutes % 60;
+        return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+      }
+
+      function formatPercent(value) {
+        if (!Number.isFinite(value)) return "-";
+        return `${value.toFixed(1).replace(/\.0$/, "")}%`;
+      }
+
+      function formatDateTime(value) {
+        if (!value) return "-";
+        return new Date(value).toLocaleString("ja-JP", { hour12: false });
+      }
+
+      function formatTime(value) {
+        if (!value) return "-";
+        return new Date(value).toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit", hour12: false });
+      }
+
+      function formatRelative(ms) {
+        if (!Number.isFinite(ms)) return "-";
+        const totalSeconds = Math.round(ms / 1000);
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        return `${minutes}:${String(seconds).padStart(2, "0")}`;
+      }
+
+      function sum(values) {
+        return values.reduce((total, value) => total + value, 0);
+      }
+
+      function isDayDeeper(candidate, current) {
+        if (!candidate) return false;
+        if (!current) return true;
+        return isPullDeeper(candidate.bestPull, current.bestPull);
+      }
+
+      function isPullDeeper(candidate, current) {
+        if (!candidate) return false;
+        if (!current) return true;
+        const candidateRank = Number(candidate.phase?.rank || candidate.phaseRank || 0);
+        const currentRank = Number(current.phase?.rank || current.phaseRank || 0);
+        if (candidateRank !== currentRank) return candidateRank > currentRank;
+        const candidateHp = Number.isFinite(candidate.bossHpRemainingPercent) ? candidate.bossHpRemainingPercent : 100;
+        const currentHp = Number.isFinite(current.bossHpRemainingPercent) ? current.bossHpRemainingPercent : 100;
+        if (candidateHp !== currentHp) return candidateHp < currentHp;
+        return Number(candidate.durationMs || 0) > Number(current.durationMs || 0);
+      }
+
+      function formatBestPull(pull) {
+        if (!pull) return "-";
+        return `${pull.phase?.label || "-"} 残HP${formatPercent(pull.bossHpRemainingPercent)}`;
+      }
+
+      function formatPhaseShort(phase) {
+        if (!phase) return "-";
+        const match = String(phase.label || phase.id || "").match(/P\d+/i);
+        return match ? match[0].toUpperCase() : phase.label || phase.id || "-";
+      }
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function metric(label, value) {
+        return `<div class="metric"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`;
+      }
+
+      function mini(label, value) {
+        return `<div class="mini"><span>${escapeHtml(label)}</span><strong>${value}</strong></div>`;
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function escapeAttr(value) {
+        return escapeHtml(value).replaceAll("`", "&#096;");
+      }
+
+      function cssEscape(value) {
+        if (window.CSS?.escape) return CSS.escape(value);
+        return String(value).replace(/["\\]/g, "\\$&");
+      }
+
+      function isLocalServerBacked() {
+        return ["localhost", "127.0.0.1", "::1"].includes(location.hostname);
+      }
+    </script>
+  </body>
+</html>
