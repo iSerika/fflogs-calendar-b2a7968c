@@ -1,6 +1,6 @@
 name = "fflogs-calendar-admin"
 main = "src/index.js"
-compatibility_date = "2026-07-03"
+compatibility_date = "2026-07-02"
 workers_dev = true
 
 [vars]
@@ -10,4 +10,3 @@ ADMIN_GITHUB_LOGIN = "iSerika"
 GITHUB_OWNER = "iSerika"
 GITHUB_REPO = "fflogs-calendar-b2a7968c"
 GITHUB_WORKFLOW_ID = "update-logs.yml"
-
