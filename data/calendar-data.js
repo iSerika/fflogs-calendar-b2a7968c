@@ -1,58 +1,60 @@
 window.FFLOGS_CALENDAR_DATA = {
   "version": 1,
-  "generatedAt": "2026-07-03T00:24:17.000+09:00",
+  "generatedAt": "2026-07-03T01:26:10.000+09:00",
   "source": {
     "mode": "fflogs-api",
     "timezone": "Asia/Tokyo",
-    "reportCount": 23,
-    "fightCount": 560,
+    "reportCount": 24,
+    "fightCount": 573,
     "warnings": [
+      "Death events failed for afJh8BCcwTb3vK4Z: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for afJh8BCcwTb3vK4Z ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for z6vDQWAqd2yFa1rL: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for z6vDQWAqd2yFa1rL ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Death events failed for Yx4PfNRjFJvD6zTw: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Damage Down events failed for Yx4PfNRjFJvD6zTw ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for R3CWf4QG8hmqL9BZ: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for R3CWf4QG8hmqL9BZ ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for tmQGrYfdJHavK3zj: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for tmQGrYfdJHavK3zj ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for vFwDjWM73xT2rcam: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for vFwDjWM73xT2rcam ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for aZct6KC27yNhkdgb: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for aZct6KC27yNhkdgb ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for KfNkmwaHY6J4APyM: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for KfNkmwaHY6J4APyM ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for 9qcrNkfW8mVZBPap: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for 9qcrNkfW8mVZBPap ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for gbZhCfqnPtazmY2x: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for gbZhCfqnPtazmY2x ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for XDxLPTMACngHZ3VR: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for XDxLPTMACngHZ3VR ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Death events failed for x9R1mzNCcpdZ2KWf: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Damage Down events failed for x9R1mzNCcpdZ2KWf ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for 3FKvrW7gwZND4zXt: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for 3FKvrW7gwZND4zXt ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for W9Bavfytc6CAJZKm: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for W9Bavfytc6CAJZKm ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for vFwDjWM73xT2rcam: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for vFwDjWM73xT2rcam ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for tmQGrYfdJHavK3zj: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for tmQGrYfdJHavK3zj ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for R3CWf4QG8hmqL9BZ: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for R3CWf4QG8hmqL9BZ ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for P29d1FxG4RQMycDB: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for P29d1FxG4RQMycDB ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for kxTjNXYcabqMmn6C: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for kxTjNXYcabqMmn6C ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for KfNkmwaHY6J4APyM: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for KfNkmwaHY6J4APyM ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for k8fKngdPVWav6HZm: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for k8fKngdPVWav6HZm ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for jfKTcn7pgh4WYBPG: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for jfKTcn7pgh4WYBPG ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for hCfRvwxM8dj9a3rz: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for hCfRvwxM8dj9a3rz ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for gwhXfxGKvVc1TjHk: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for gwhXfxGKvVc1TjHk ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for gbZhCfqnPtazmY2x: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for gbZhCfqnPtazmY2x ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Death events failed for FgG3PnW8kdxZvJRm: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Damage Down events failed for FgG3PnW8kdxZvJRm ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Death events failed for cpvVt6QkaJPhFx1X: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Damage Down events failed for cpvVt6QkaJPhFx1X ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for gwhXfxGKvVc1TjHk: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for gwhXfxGKvVc1TjHk ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for XDxLPTMACngHZ3VR: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for XDxLPTMACngHZ3VR ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for hCfRvwxM8dj9a3rz: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for hCfRvwxM8dj9a3rz ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for z6vDQWAqd2yFa1rL: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for z6vDQWAqd2yFa1rL ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for 28rwQ6YvbLGf9BVA: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for 28rwQ6YvbLGf9BVA ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Death events failed for BdLNvrnFHzQqc6Ym: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
       "Damage Down events failed for BdLNvrnFHzQqc6Ym ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for jfKTcn7pgh4WYBPG: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for jfKTcn7pgh4WYBPG ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for k8fKngdPVWav6HZm: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for k8fKngdPVWav6HZm ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for W9Bavfytc6CAJZKm: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for W9Bavfytc6CAJZKm ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for kxTjNXYcabqMmn6C: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for kxTjNXYcabqMmn6C ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Death events failed for P29d1FxG4RQMycDB: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
-      "Damage Down events failed for P29d1FxG4RQMycDB ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\"."
+      "Death events failed for aZct6KC27yNhkdgb: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for aZct6KC27yNhkdgb ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for 9qcrNkfW8mVZBPap: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for 9qcrNkfW8mVZBPap ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for 3FKvrW7gwZND4zXt: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for 3FKvrW7gwZND4zXt ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Death events failed for 28rwQ6YvbLGf9BVA: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\".",
+      "Damage Down events failed for 28rwQ6YvbLGf9BVA ability 1002911: Variable \"$abilityId\" of type \"Int\" used in position expecting type \"Float\"."
     ]
   },
   "target": {
@@ -4498,42 +4500,6 @@ window.FFLOGS_CALENDAR_DATA = {
       "firstDeathSummary": {},
       "pulls": [
         {
-          "id": "jfKTcn7pgh4WYBPG-1",
-          "reportCode": "jfKTcn7pgh4WYBPG",
-          "reportTitle": "Dancing Mad",
-          "fightId": 1,
-          "encounterId": 1085,
-          "name": "Kefka",
-          "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:02:22.000+09:00",
-          "endedAt": "2026-06-10T00:05:33.000+09:00",
-          "durationMs": 190833,
-          "kill": false,
-          "progressPercent": 34.39,
-          "bossHpRemainingPercent": 65.61,
-          "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
-            "source": "fflogs-lastPhase",
-            "confidence": 0.86
-          },
-          "phaseSource": "fflogs-lastPhase",
-          "phaseConfidence": 0.86,
-          "firstDeath": null,
-          "deathChain": [],
-          "damageDownEvents": [],
-          "damageDownSummary": [],
-          "wipeCause": {
-            "category": "enrage_or_timeout",
-            "label": "時間切れ/ログ終端",
-            "confidence": 0.4,
-            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
-            "manualLabel": ""
-          },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=1"
-        },
-        {
           "id": "k8fKngdPVWav6HZm-1",
           "reportCode": "k8fKngdPVWav6HZm",
           "reportTitle": "Dancing Mad",
@@ -4570,23 +4536,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=1"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-2",
+          "id": "jfKTcn7pgh4WYBPG-1",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 2,
+          "fightId": 1,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:06:05.000+09:00",
-          "endedAt": "2026-06-10T00:07:05.000+09:00",
-          "durationMs": 59198,
+          "startedAt": "2026-06-10T00:02:22.000+09:00",
+          "endedAt": "2026-06-10T00:05:33.000+09:00",
+          "durationMs": 190833,
           "kill": false,
-          "progressPercent": 27.67,
-          "bossHpRemainingPercent": 72.33,
+          "progressPercent": 34.39,
+          "bossHpRemainingPercent": 65.61,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -4603,7 +4569,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=2"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=1"
         },
         {
           "id": "k8fKngdPVWav6HZm-2",
@@ -4642,19 +4608,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=2"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-3",
+          "id": "jfKTcn7pgh4WYBPG-2",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 3,
+          "fightId": 2,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:07:24.000+09:00",
-          "endedAt": "2026-06-10T00:08:13.000+09:00",
-          "durationMs": 49329,
+          "startedAt": "2026-06-10T00:06:05.000+09:00",
+          "endedAt": "2026-06-10T00:07:05.000+09:00",
+          "durationMs": 59198,
           "kill": false,
-          "progressPercent": 25.439999999999998,
-          "bossHpRemainingPercent": 74.56,
+          "progressPercent": 27.67,
+          "bossHpRemainingPercent": 72.33,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -4675,7 +4641,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=3"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=2"
         },
         {
           "id": "k8fKngdPVWav6HZm-3",
@@ -4714,19 +4680,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=3"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-4",
+          "id": "jfKTcn7pgh4WYBPG-3",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 4,
+          "fightId": 3,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:08:32.000+09:00",
-          "endedAt": "2026-06-10T00:10:16.000+09:00",
-          "durationMs": 103531,
+          "startedAt": "2026-06-10T00:07:24.000+09:00",
+          "endedAt": "2026-06-10T00:08:13.000+09:00",
+          "durationMs": 49329,
           "kill": false,
-          "progressPercent": 43.63,
-          "bossHpRemainingPercent": 56.37,
+          "progressPercent": 25.439999999999998,
+          "bossHpRemainingPercent": 74.56,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -4747,7 +4713,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=4"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=3"
         },
         {
           "id": "k8fKngdPVWav6HZm-4",
@@ -4786,19 +4752,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=4"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-5",
+          "id": "jfKTcn7pgh4WYBPG-4",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 5,
+          "fightId": 4,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:10:40.000+09:00",
-          "endedAt": "2026-06-10T00:14:09.000+09:00",
-          "durationMs": 208604,
+          "startedAt": "2026-06-10T00:08:32.000+09:00",
+          "endedAt": "2026-06-10T00:10:16.000+09:00",
+          "durationMs": 103531,
           "kill": false,
-          "progressPercent": 79.85,
-          "bossHpRemainingPercent": 20.15,
+          "progressPercent": 43.63,
+          "bossHpRemainingPercent": 56.37,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -4819,7 +4785,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=5"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=4"
         },
         {
           "id": "k8fKngdPVWav6HZm-5",
@@ -4858,23 +4824,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=5"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-6",
+          "id": "jfKTcn7pgh4WYBPG-5",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 6,
+          "fightId": 5,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:14:48.000+09:00",
-          "endedAt": "2026-06-10T00:19:34.000+09:00",
-          "durationMs": 286472,
+          "startedAt": "2026-06-10T00:10:40.000+09:00",
+          "endedAt": "2026-06-10T00:14:09.000+09:00",
+          "durationMs": 208604,
           "kill": false,
-          "progressPercent": 38.04,
-          "bossHpRemainingPercent": 61.96,
+          "progressPercent": 79.85,
+          "bossHpRemainingPercent": 20.15,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -4891,7 +4857,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=6"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=5"
         },
         {
           "id": "k8fKngdPVWav6HZm-6",
@@ -4930,23 +4896,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=6"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-7",
+          "id": "jfKTcn7pgh4WYBPG-6",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 7,
+          "fightId": 6,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:20:32.000+09:00",
-          "endedAt": "2026-06-10T00:22:28.000+09:00",
-          "durationMs": 115982,
+          "startedAt": "2026-06-10T00:14:48.000+09:00",
+          "endedAt": "2026-06-10T00:19:34.000+09:00",
+          "durationMs": 286472,
           "kill": false,
-          "progressPercent": 51.5,
-          "bossHpRemainingPercent": 48.5,
+          "progressPercent": 38.04,
+          "bossHpRemainingPercent": 61.96,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -4963,7 +4929,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=7"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=6"
         },
         {
           "id": "k8fKngdPVWav6HZm-7",
@@ -5002,23 +4968,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=7"
         },
         {
-          "id": "jfKTcn7pgh4WYBPG-8",
+          "id": "jfKTcn7pgh4WYBPG-7",
           "reportCode": "jfKTcn7pgh4WYBPG",
           "reportTitle": "Dancing Mad",
-          "fightId": 8,
+          "fightId": 7,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-10",
-          "startedAt": "2026-06-10T00:22:53.000+09:00",
-          "endedAt": "2026-06-10T00:28:22.000+09:00",
-          "durationMs": 328628,
+          "startedAt": "2026-06-10T00:20:32.000+09:00",
+          "endedAt": "2026-06-10T00:22:28.000+09:00",
+          "durationMs": 115982,
           "kill": false,
-          "progressPercent": 44.88,
-          "bossHpRemainingPercent": 55.12,
+          "progressPercent": 51.5,
+          "bossHpRemainingPercent": 48.5,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -5035,7 +5001,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=8"
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=7"
         },
         {
           "id": "k8fKngdPVWav6HZm-8",
@@ -5072,6 +5038,42 @@ window.FFLOGS_CALENDAR_DATA = {
             "manualLabel": ""
           },
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=8"
+        },
+        {
+          "id": "jfKTcn7pgh4WYBPG-8",
+          "reportCode": "jfKTcn7pgh4WYBPG",
+          "reportTitle": "Dancing Mad",
+          "fightId": 8,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-06-10",
+          "startedAt": "2026-06-10T00:22:53.000+09:00",
+          "endedAt": "2026-06-10T00:28:22.000+09:00",
+          "durationMs": 328628,
+          "kill": false,
+          "progressPercent": 44.88,
+          "bossHpRemainingPercent": 55.12,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=8"
         },
         {
           "id": "jfKTcn7pgh4WYBPG-9",
@@ -16380,8 +16382,8 @@ window.FFLOGS_CALENDAR_DATA = {
       "bestProgressPercent": 62.23,
       "bestBossHpRemainingPercent": 37.77,
       "bestPull": {
-        "id": "9qcrNkfW8mVZBPap-8",
-        "reportCode": "9qcrNkfW8mVZBPap",
+        "id": "gbZhCfqnPtazmY2x-8",
+        "reportCode": "gbZhCfqnPtazmY2x",
         "reportTitle": "Dancing Mad",
         "fightId": 8,
         "encounterId": 1085,
@@ -16413,7 +16415,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
           "manualLabel": ""
         },
-        "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=8"
+        "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=8"
       },
       "firstPullAt": "2026-06-22T00:01:19.000+09:00",
       "lastPullEndedAt": "2026-06-23T00:03:05.000+09:00",
@@ -16570,42 +16572,6 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/x9R1mzNCcpdZ2KWf#fight=29"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-1",
-          "reportCode": "9qcrNkfW8mVZBPap",
-          "reportTitle": "Dancing Mad",
-          "fightId": 1,
-          "encounterId": 1085,
-          "name": "Kefka / Chaos / Exdeath",
-          "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:03:51.000+09:00",
-          "endedAt": "2026-06-22T21:13:56.000+09:00",
-          "durationMs": 605147,
-          "kill": false,
-          "progressPercent": 54.15,
-          "bossHpRemainingPercent": 45.85,
-          "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
-            "source": "fflogs-lastPhase",
-            "confidence": 0.86
-          },
-          "phaseSource": "fflogs-lastPhase",
-          "phaseConfidence": 0.86,
-          "firstDeath": null,
-          "deathChain": [],
-          "damageDownEvents": [],
-          "damageDownSummary": [],
-          "wipeCause": {
-            "category": "enrage_or_timeout",
-            "label": "時間切れ/ログ終端",
-            "confidence": 0.4,
-            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
-            "manualLabel": ""
-          },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=1"
-        },
-        {
           "id": "gbZhCfqnPtazmY2x-1",
           "reportCode": "gbZhCfqnPtazmY2x",
           "reportTitle": "Dancing Mad",
@@ -16642,19 +16608,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=1"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-2",
+          "id": "9qcrNkfW8mVZBPap-1",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 2,
+          "fightId": 1,
           "encounterId": 1085,
           "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:18:07.000+09:00",
-          "endedAt": "2026-06-22T21:27:09.000+09:00",
-          "durationMs": 542476,
+          "startedAt": "2026-06-22T21:03:51.000+09:00",
+          "endedAt": "2026-06-22T21:13:56.000+09:00",
+          "durationMs": 605147,
           "kill": false,
-          "progressPercent": 39.04,
-          "bossHpRemainingPercent": 60.96,
+          "progressPercent": 54.15,
+          "bossHpRemainingPercent": 45.85,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -16675,7 +16641,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=2"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=1"
         },
         {
           "id": "gbZhCfqnPtazmY2x-2",
@@ -16714,23 +16680,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=2"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-3",
+          "id": "9qcrNkfW8mVZBPap-2",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 3,
+          "fightId": 2,
           "encounterId": 1085,
-          "name": "Kefka",
+          "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:27:58.000+09:00",
-          "endedAt": "2026-06-22T21:29:36.000+09:00",
-          "durationMs": 97504,
+          "startedAt": "2026-06-22T21:18:07.000+09:00",
+          "endedAt": "2026-06-22T21:27:09.000+09:00",
+          "durationMs": 542476,
           "kill": false,
-          "progressPercent": 43.54,
-          "bossHpRemainingPercent": 56.46,
+          "progressPercent": 39.04,
+          "bossHpRemainingPercent": 60.96,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -16747,7 +16713,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=3"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=2"
         },
         {
           "id": "gbZhCfqnPtazmY2x-3",
@@ -16786,23 +16752,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=3"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-4",
+          "id": "9qcrNkfW8mVZBPap-3",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 4,
+          "fightId": 3,
           "encounterId": 1085,
-          "name": "Kefka / Chaos / Exdeath",
+          "name": "Kefka",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:30:05.000+09:00",
-          "endedAt": "2026-06-22T21:39:51.000+09:00",
-          "durationMs": 586685,
+          "startedAt": "2026-06-22T21:27:58.000+09:00",
+          "endedAt": "2026-06-22T21:29:36.000+09:00",
+          "durationMs": 97504,
           "kill": false,
-          "progressPercent": 43.68,
-          "bossHpRemainingPercent": 56.32,
+          "progressPercent": 43.54,
+          "bossHpRemainingPercent": 56.46,
           "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -16819,7 +16785,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=4"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=3"
         },
         {
           "id": "gbZhCfqnPtazmY2x-4",
@@ -16858,19 +16824,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=4"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-5",
+          "id": "9qcrNkfW8mVZBPap-4",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 5,
+          "fightId": 4,
           "encounterId": 1085,
           "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:40:48.000+09:00",
-          "endedAt": "2026-06-22T21:50:55.000+09:00",
-          "durationMs": 606339,
+          "startedAt": "2026-06-22T21:30:05.000+09:00",
+          "endedAt": "2026-06-22T21:39:51.000+09:00",
+          "durationMs": 586685,
           "kill": false,
-          "progressPercent": 55.87,
-          "bossHpRemainingPercent": 44.13,
+          "progressPercent": 43.68,
+          "bossHpRemainingPercent": 56.32,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -16891,7 +16857,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=5"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=4"
         },
         {
           "id": "gbZhCfqnPtazmY2x-5",
@@ -16930,23 +16896,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=5"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-6",
+          "id": "9qcrNkfW8mVZBPap-5",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 6,
+          "fightId": 5,
           "encounterId": 1085,
-          "name": "Kefka",
+          "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:52:57.000+09:00",
-          "endedAt": "2026-06-22T21:56:23.000+09:00",
-          "durationMs": 206639,
+          "startedAt": "2026-06-22T21:40:48.000+09:00",
+          "endedAt": "2026-06-22T21:50:55.000+09:00",
+          "durationMs": 606339,
           "kill": false,
-          "progressPercent": 85.1,
-          "bossHpRemainingPercent": 14.9,
+          "progressPercent": 55.87,
+          "bossHpRemainingPercent": 44.13,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -16963,7 +16929,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=6"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=5"
         },
         {
           "id": "gbZhCfqnPtazmY2x-6",
@@ -17002,23 +16968,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=6"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-7",
+          "id": "9qcrNkfW8mVZBPap-6",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 7,
+          "fightId": 6,
           "encounterId": 1085,
-          "name": "Kefka / Chaos / Exdeath",
+          "name": "Kefka",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T21:56:51.000+09:00",
-          "endedAt": "2026-06-22T22:05:30.000+09:00",
-          "durationMs": 519089,
+          "startedAt": "2026-06-22T21:52:57.000+09:00",
+          "endedAt": "2026-06-22T21:56:23.000+09:00",
+          "durationMs": 206639,
           "kill": false,
-          "progressPercent": 35.5,
-          "bossHpRemainingPercent": 64.5,
+          "progressPercent": 85.1,
+          "bossHpRemainingPercent": 14.9,
           "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -17035,7 +17001,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=7"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=6"
         },
         {
           "id": "gbZhCfqnPtazmY2x-7",
@@ -17074,19 +17040,19 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=7"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-8",
+          "id": "9qcrNkfW8mVZBPap-7",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 8,
+          "fightId": 7,
           "encounterId": 1085,
           "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T22:06:21.000+09:00",
-          "endedAt": "2026-06-22T22:17:03.000+09:00",
-          "durationMs": 641656,
+          "startedAt": "2026-06-22T21:56:51.000+09:00",
+          "endedAt": "2026-06-22T22:05:30.000+09:00",
+          "durationMs": 519089,
           "kill": false,
-          "progressPercent": 62.23,
-          "bossHpRemainingPercent": 37.77,
+          "progressPercent": 35.5,
+          "bossHpRemainingPercent": 64.5,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -17107,7 +17073,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=8"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=7"
         },
         {
           "id": "gbZhCfqnPtazmY2x-8",
@@ -17146,23 +17112,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=8"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-9",
+          "id": "9qcrNkfW8mVZBPap-8",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 9,
+          "fightId": 8,
           "encounterId": 1085,
-          "name": "Kefka",
+          "name": "Kefka / Chaos / Exdeath",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T22:20:27.000+09:00",
-          "endedAt": "2026-06-22T22:22:07.000+09:00",
-          "durationMs": 100000,
+          "startedAt": "2026-06-22T22:06:21.000+09:00",
+          "endedAt": "2026-06-22T22:17:03.000+09:00",
+          "durationMs": 641656,
           "kill": false,
-          "progressPercent": 43.87,
-          "bossHpRemainingPercent": 56.13,
+          "progressPercent": 62.23,
+          "bossHpRemainingPercent": 37.77,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -17179,7 +17145,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=9"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=8"
         },
         {
           "id": "gbZhCfqnPtazmY2x-9",
@@ -17218,23 +17184,23 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=9"
         },
         {
-          "id": "9qcrNkfW8mVZBPap-10",
+          "id": "9qcrNkfW8mVZBPap-9",
           "reportCode": "9qcrNkfW8mVZBPap",
           "reportTitle": "Dancing Mad",
-          "fightId": 10,
+          "fightId": 9,
           "encounterId": 1085,
           "name": "Kefka",
           "activityDate": "2026-06-22",
-          "startedAt": "2026-06-22T22:22:30.000+09:00",
-          "endedAt": "2026-06-22T22:27:43.000+09:00",
-          "durationMs": 313001,
+          "startedAt": "2026-06-22T22:20:27.000+09:00",
+          "endedAt": "2026-06-22T22:22:07.000+09:00",
+          "durationMs": 100000,
           "kill": false,
-          "progressPercent": 51.56,
-          "bossHpRemainingPercent": 48.44,
+          "progressPercent": 43.87,
+          "bossHpRemainingPercent": 56.13,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
@@ -17251,7 +17217,7 @@ window.FFLOGS_CALENDAR_DATA = {
             "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
             "manualLabel": ""
           },
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=10"
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=9"
         },
         {
           "id": "gbZhCfqnPtazmY2x-10",
@@ -17288,6 +17254,42 @@ window.FFLOGS_CALENDAR_DATA = {
             "manualLabel": ""
           },
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=10"
+        },
+        {
+          "id": "9qcrNkfW8mVZBPap-10",
+          "reportCode": "9qcrNkfW8mVZBPap",
+          "reportTitle": "Dancing Mad",
+          "fightId": 10,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-06-22",
+          "startedAt": "2026-06-22T22:22:30.000+09:00",
+          "endedAt": "2026-06-22T22:27:43.000+09:00",
+          "durationMs": 313001,
+          "kill": false,
+          "progressPercent": 51.56,
+          "bossHpRemainingPercent": 48.44,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=10"
         },
         {
           "id": "9qcrNkfW8mVZBPap-11",
@@ -21688,17 +21690,546 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/Yx4PfNRjFJvD6zTw#fight=17"
         }
       ]
+    },
+    {
+      "date": "2026-07-02",
+      "sessionCount": 1,
+      "pullCount": 13,
+      "deepestPhase": {
+        "id": "p3",
+        "label": "P3 エクスデス カオス",
+        "rank": 3,
+        "source": "fflogs-lastPhase",
+        "confidence": 0.86
+      },
+      "bestProgressPercent": 99.99,
+      "bestBossHpRemainingPercent": 0.01,
+      "bestPull": {
+        "id": "afJh8BCcwTb3vK4Z-11",
+        "reportCode": "afJh8BCcwTb3vK4Z",
+        "reportTitle": "Dancing Mad",
+        "fightId": 11,
+        "encounterId": 1085,
+        "name": "Kefka / Chaos / Exdeath",
+        "activityDate": "2026-07-02",
+        "startedAt": "2026-07-02T23:35:41.000+09:00",
+        "endedAt": "2026-07-02T23:48:05.000+09:00",
+        "durationMs": 743994,
+        "kill": false,
+        "progressPercent": 99.99,
+        "bossHpRemainingPercent": 0.01,
+        "phase": {
+          "id": "p3",
+          "label": "P3 エクスデス カオス",
+          "rank": 3,
+          "source": "fflogs-lastPhase",
+          "confidence": 0.86
+        },
+        "phaseSource": "fflogs-lastPhase",
+        "phaseConfidence": 0.86,
+        "firstDeath": null,
+        "deathChain": [],
+        "damageDownEvents": [],
+        "damageDownSummary": [],
+        "wipeCause": {
+          "category": "enrage_or_timeout",
+          "label": "時間切れ/ログ終端",
+          "confidence": 0.4,
+          "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+          "manualLabel": ""
+        },
+        "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=11"
+      },
+      "firstPullAt": "2026-07-02T22:01:52.000+09:00",
+      "lastPullEndedAt": "2026-07-02T23:58:07.000+09:00",
+      "activityDurationMs": 6974186,
+      "activeFightDurationMs": 6200799,
+      "downtimeMs": 773387,
+      "wipeCauseSummary": {
+        "enrage_or_timeout": 13
+      },
+      "firstDeathSummary": {},
+      "pulls": [
+        {
+          "id": "afJh8BCcwTb3vK4Z-1",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 1,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:01:52.000+09:00",
+          "endedAt": "2026-07-02T22:13:50.000+09:00",
+          "durationMs": 717237,
+          "kill": false,
+          "progressPercent": 84.66,
+          "bossHpRemainingPercent": 15.34,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=1"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-2",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 2,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:14:37.000+09:00",
+          "endedAt": "2026-07-02T22:17:51.000+09:00",
+          "durationMs": 194632,
+          "kill": false,
+          "progressPercent": 81.22,
+          "bossHpRemainingPercent": 18.78,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=2"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-3",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 3,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:18:19.000+09:00",
+          "endedAt": "2026-07-02T22:23:52.000+09:00",
+          "durationMs": 332408,
+          "kill": false,
+          "progressPercent": 63.04,
+          "bossHpRemainingPercent": 36.96,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=3"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-4",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 4,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:24:22.000+09:00",
+          "endedAt": "2026-07-02T22:29:08.000+09:00",
+          "durationMs": 286085,
+          "kill": false,
+          "progressPercent": 45.42,
+          "bossHpRemainingPercent": 54.58,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=4"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-5",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 5,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:29:29.000+09:00",
+          "endedAt": "2026-07-02T22:41:49.000+09:00",
+          "durationMs": 739986,
+          "kill": false,
+          "progressPercent": 92.69,
+          "bossHpRemainingPercent": 7.31,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=5"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-6",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 6,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:43:15.000+09:00",
+          "endedAt": "2026-07-02T22:55:06.000+09:00",
+          "durationMs": 711348,
+          "kill": false,
+          "progressPercent": 87,
+          "bossHpRemainingPercent": 13,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=6"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-7",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 7,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T22:57:04.000+09:00",
+          "endedAt": "2026-07-02T23:06:40.000+09:00",
+          "durationMs": 575781,
+          "kill": false,
+          "progressPercent": 47.61,
+          "bossHpRemainingPercent": 52.39,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=7"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-8",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 8,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:07:29.000+09:00",
+          "endedAt": "2026-07-02T23:19:50.000+09:00",
+          "durationMs": 740330,
+          "kill": false,
+          "progressPercent": 96.49,
+          "bossHpRemainingPercent": 3.51,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=8"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-9",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 9,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:22:30.000+09:00",
+          "endedAt": "2026-07-02T23:33:34.000+09:00",
+          "durationMs": 664380,
+          "kill": false,
+          "progressPercent": 81.73,
+          "bossHpRemainingPercent": 18.27,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=9"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-10",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 10,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:34:32.000+09:00",
+          "endedAt": "2026-07-02T23:35:24.000+09:00",
+          "durationMs": 51638,
+          "kill": false,
+          "progressPercent": 24.870000000000005,
+          "bossHpRemainingPercent": 75.13,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=10"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-11",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 11,
+          "encounterId": 1085,
+          "name": "Kefka / Chaos / Exdeath",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:35:41.000+09:00",
+          "endedAt": "2026-07-02T23:48:05.000+09:00",
+          "durationMs": 743994,
+          "kill": false,
+          "progressPercent": 99.99,
+          "bossHpRemainingPercent": 0.01,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=11"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-12",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 12,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:50:27.000+09:00",
+          "endedAt": "2026-07-02T23:51:18.000+09:00",
+          "durationMs": 51358,
+          "kill": false,
+          "progressPercent": 25.400000000000006,
+          "bossHpRemainingPercent": 74.6,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=12"
+        },
+        {
+          "id": "afJh8BCcwTb3vK4Z-13",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "reportTitle": "Dancing Mad",
+          "fightId": 13,
+          "encounterId": 1085,
+          "name": "Kefka",
+          "activityDate": "2026-07-02",
+          "startedAt": "2026-07-02T23:51:35.000+09:00",
+          "endedAt": "2026-07-02T23:58:07.000+09:00",
+          "durationMs": 391622,
+          "kill": false,
+          "progressPercent": 99.39,
+          "bossHpRemainingPercent": 0.61,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseSource": "fflogs-lastPhase",
+          "phaseConfidence": 0.86,
+          "firstDeath": null,
+          "deathChain": [],
+          "damageDownEvents": [],
+          "damageDownSummary": [],
+          "wipeCause": {
+            "category": "enrage_or_timeout",
+            "label": "時間切れ/ログ終端",
+            "confidence": 0.4,
+            "reason": "死亡イベントが見つからないため、ログ終端や時間切れの可能性があります。",
+            "manualLabel": ""
+          },
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=13"
+        }
+      ]
     }
   ],
   "analytics": {
-    "totalDays": 24,
-    "totalPulls": 560,
-    "totalActiveFightDurationMs": 156432534,
+    "totalDays": 25,
+    "totalPulls": 573,
+    "totalActiveFightDurationMs": 162633333,
     "firstDeathRanking": [],
     "wipeCauseRanking": [
       {
         "category": "enrage_or_timeout",
-        "count": 560,
+        "count": 573,
         "label": "時間切れ/ログ終端"
       }
     ],
@@ -21870,6 +22401,13 @@ window.FFLOGS_CALENDAR_DATA = {
         "rank": 3,
         "bestProgressPercent": 94.53,
         "bestBossHpRemainingPercent": 5.47
+      },
+      {
+        "date": "2026-07-02",
+        "phase": "P3 エクスデス カオス",
+        "rank": 3,
+        "bestProgressPercent": 99.99,
+        "bestBossHpRemainingPercent": 0.01
       }
     ],
     "progressGraph": {
@@ -24479,29 +25017,6 @@ window.FFLOGS_CALENDAR_DATA = {
         {
           "pullNumber": 114,
           "date": "2026-06-10",
-          "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 1,
-          "startedAt": "2026-06-10T00:02:22.000+09:00",
-          "durationMs": 190833,
-          "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
-            "source": "fflogs-lastPhase",
-            "confidence": 0.86
-          },
-          "phaseRank": 2,
-          "bossHpRemainingPercent": 65.61,
-          "progressPercent": 34.39,
-          "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=1",
-          "bestPhaseRank": 2,
-          "bestBossHpRemainingPercent": 58.37,
-          "bestPullId": "W9Bavfytc6CAJZKm-28"
-        },
-        {
-          "pullNumber": 115,
-          "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 1,
           "startedAt": "2026-06-10T00:02:22.000+09:00",
@@ -24523,30 +25038,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 116,
+          "pullNumber": 115,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 2,
-          "startedAt": "2026-06-10T00:06:05.000+09:00",
-          "durationMs": 59198,
+          "fightId": 1,
+          "startedAt": "2026-06-10T00:02:22.000+09:00",
+          "durationMs": 190833,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 1,
-          "bossHpRemainingPercent": 72.33,
-          "progressPercent": 27.67,
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 65.61,
+          "progressPercent": 34.39,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=2",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=1",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 117,
+          "pullNumber": 116,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 2,
@@ -24569,12 +25084,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 118,
+          "pullNumber": 117,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 3,
-          "startedAt": "2026-06-10T00:07:24.000+09:00",
-          "durationMs": 49329,
+          "fightId": 2,
+          "startedAt": "2026-06-10T00:06:05.000+09:00",
+          "durationMs": 59198,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -24583,16 +25098,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 1,
-          "bossHpRemainingPercent": 74.56,
-          "progressPercent": 25.439999999999998,
+          "bossHpRemainingPercent": 72.33,
+          "progressPercent": 27.67,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=3",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=2",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 119,
+          "pullNumber": 118,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 3,
@@ -24615,12 +25130,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 120,
+          "pullNumber": 119,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 4,
-          "startedAt": "2026-06-10T00:08:32.000+09:00",
-          "durationMs": 103531,
+          "fightId": 3,
+          "startedAt": "2026-06-10T00:07:24.000+09:00",
+          "durationMs": 49329,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -24629,16 +25144,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 1,
-          "bossHpRemainingPercent": 56.37,
-          "progressPercent": 43.63,
+          "bossHpRemainingPercent": 74.56,
+          "progressPercent": 25.439999999999998,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=4",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=3",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 121,
+          "pullNumber": 120,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 4,
@@ -24661,12 +25176,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 122,
+          "pullNumber": 121,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 5,
-          "startedAt": "2026-06-10T00:10:40.000+09:00",
-          "durationMs": 208604,
+          "fightId": 4,
+          "startedAt": "2026-06-10T00:08:32.000+09:00",
+          "durationMs": 103531,
           "phase": {
             "id": "p1",
             "label": "P1 ケフカ",
@@ -24675,16 +25190,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 1,
-          "bossHpRemainingPercent": 20.15,
-          "progressPercent": 79.85,
+          "bossHpRemainingPercent": 56.37,
+          "progressPercent": 43.63,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=5",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=4",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 123,
+          "pullNumber": 122,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 5,
@@ -24707,30 +25222,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 124,
+          "pullNumber": 123,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 6,
-          "startedAt": "2026-06-10T00:14:48.000+09:00",
-          "durationMs": 286472,
+          "fightId": 5,
+          "startedAt": "2026-06-10T00:10:40.000+09:00",
+          "durationMs": 208604,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 2,
-          "bossHpRemainingPercent": 61.96,
-          "progressPercent": 38.04,
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 20.15,
+          "progressPercent": 79.85,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=6",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=5",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 125,
+          "pullNumber": 124,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 6,
@@ -24753,30 +25268,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 126,
+          "pullNumber": 125,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 7,
-          "startedAt": "2026-06-10T00:20:32.000+09:00",
-          "durationMs": 115982,
+          "fightId": 6,
+          "startedAt": "2026-06-10T00:14:48.000+09:00",
+          "durationMs": 286472,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 1,
-          "bossHpRemainingPercent": 48.5,
-          "progressPercent": 51.5,
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 61.96,
+          "progressPercent": 38.04,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=7",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=6",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 58.37,
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 127,
+          "pullNumber": 126,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 7,
@@ -24799,30 +25314,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 128,
+          "pullNumber": 127,
           "date": "2026-06-10",
           "reportCode": "jfKTcn7pgh4WYBPG",
-          "fightId": 8,
-          "startedAt": "2026-06-10T00:22:53.000+09:00",
-          "durationMs": 328628,
+          "fightId": 7,
+          "startedAt": "2026-06-10T00:20:32.000+09:00",
+          "durationMs": 115982,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 2,
-          "bossHpRemainingPercent": 55.12,
-          "progressPercent": 44.88,
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 48.5,
+          "progressPercent": 51.5,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=8",
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=7",
           "bestPhaseRank": 2,
-          "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestBossHpRemainingPercent": 58.37,
+          "bestPullId": "W9Bavfytc6CAJZKm-28"
         },
         {
-          "pullNumber": 129,
+          "pullNumber": 128,
           "date": "2026-06-10",
           "reportCode": "k8fKngdPVWav6HZm",
           "fightId": 8,
@@ -24842,7 +25357,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm#fight=8",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
+        },
+        {
+          "pullNumber": 129,
+          "date": "2026-06-10",
+          "reportCode": "jfKTcn7pgh4WYBPG",
+          "fightId": 8,
+          "startedAt": "2026-06-10T00:22:53.000+09:00",
+          "durationMs": 328628,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 55.12,
+          "progressPercent": 44.88,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=8",
+          "bestPhaseRank": 2,
+          "bestBossHpRemainingPercent": 55.12,
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 130,
@@ -24865,7 +25403,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=9",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 131,
@@ -24888,7 +25426,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=10",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 132,
@@ -24911,7 +25449,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=11",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 133,
@@ -24934,7 +25472,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=12",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 134,
@@ -24957,7 +25495,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=13",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 135,
@@ -24980,7 +25518,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=14",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 136,
@@ -25003,7 +25541,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG#fight=15",
           "bestPhaseRank": 2,
           "bestBossHpRemainingPercent": 55.12,
-          "bestPullId": "jfKTcn7pgh4WYBPG-8"
+          "bestPullId": "k8fKngdPVWav6HZm-8"
         },
         {
           "pullNumber": 137,
@@ -31724,29 +32262,6 @@ window.FFLOGS_CALENDAR_DATA = {
         {
           "pullNumber": 429,
           "date": "2026-06-22",
-          "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 1,
-          "startedAt": "2026-06-22T21:03:51.000+09:00",
-          "durationMs": 605147,
-          "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
-            "source": "fflogs-lastPhase",
-            "confidence": 0.86
-          },
-          "phaseRank": 3,
-          "bossHpRemainingPercent": 45.85,
-          "progressPercent": 54.15,
-          "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=1",
-          "bestPhaseRank": 3,
-          "bestBossHpRemainingPercent": 40.66,
-          "bestPullId": "x9R1mzNCcpdZ2KWf-19"
-        },
-        {
-          "pullNumber": 430,
-          "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 1,
           "startedAt": "2026-06-22T21:03:51.000+09:00",
@@ -31768,12 +32283,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 431,
+          "pullNumber": 430,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 2,
-          "startedAt": "2026-06-22T21:18:07.000+09:00",
-          "durationMs": 542476,
+          "fightId": 1,
+          "startedAt": "2026-06-22T21:03:51.000+09:00",
+          "durationMs": 605147,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -31782,16 +32297,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 3,
-          "bossHpRemainingPercent": 60.96,
-          "progressPercent": 39.04,
+          "bossHpRemainingPercent": 45.85,
+          "progressPercent": 54.15,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=2",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=1",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 432,
+          "pullNumber": 431,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 2,
@@ -31814,30 +32329,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 433,
+          "pullNumber": 432,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 3,
-          "startedAt": "2026-06-22T21:27:58.000+09:00",
-          "durationMs": 97504,
+          "fightId": 2,
+          "startedAt": "2026-06-22T21:18:07.000+09:00",
+          "durationMs": 542476,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 1,
-          "bossHpRemainingPercent": 56.46,
-          "progressPercent": 43.54,
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 60.96,
+          "progressPercent": 39.04,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=3",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=2",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 434,
+          "pullNumber": 433,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 3,
@@ -31860,30 +32375,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 435,
+          "pullNumber": 434,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 4,
-          "startedAt": "2026-06-22T21:30:05.000+09:00",
-          "durationMs": 586685,
+          "fightId": 3,
+          "startedAt": "2026-06-22T21:27:58.000+09:00",
+          "durationMs": 97504,
           "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 3,
-          "bossHpRemainingPercent": 56.32,
-          "progressPercent": 43.68,
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 56.46,
+          "progressPercent": 43.54,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=4",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=3",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 436,
+          "pullNumber": 435,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 4,
@@ -31906,12 +32421,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 437,
+          "pullNumber": 436,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 5,
-          "startedAt": "2026-06-22T21:40:48.000+09:00",
-          "durationMs": 606339,
+          "fightId": 4,
+          "startedAt": "2026-06-22T21:30:05.000+09:00",
+          "durationMs": 586685,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -31920,16 +32435,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 3,
-          "bossHpRemainingPercent": 44.13,
-          "progressPercent": 55.87,
+          "bossHpRemainingPercent": 56.32,
+          "progressPercent": 43.68,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=5",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=4",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 438,
+          "pullNumber": 437,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 5,
@@ -31952,30 +32467,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 439,
+          "pullNumber": 438,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 6,
-          "startedAt": "2026-06-22T21:52:57.000+09:00",
-          "durationMs": 206639,
+          "fightId": 5,
+          "startedAt": "2026-06-22T21:40:48.000+09:00",
+          "durationMs": 606339,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 1,
-          "bossHpRemainingPercent": 14.9,
-          "progressPercent": 85.1,
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 44.13,
+          "progressPercent": 55.87,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=6",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=5",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 440,
+          "pullNumber": 439,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 6,
@@ -31998,30 +32513,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 441,
+          "pullNumber": 440,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 7,
-          "startedAt": "2026-06-22T21:56:51.000+09:00",
-          "durationMs": 519089,
+          "fightId": 6,
+          "startedAt": "2026-06-22T21:52:57.000+09:00",
+          "durationMs": 206639,
           "phase": {
-            "id": "p3",
-            "label": "P3 エクスデス カオス",
-            "rank": 3,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 3,
-          "bossHpRemainingPercent": 64.5,
-          "progressPercent": 35.5,
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 14.9,
+          "progressPercent": 85.1,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=7",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=6",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 40.66,
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 442,
+          "pullNumber": 441,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 7,
@@ -32044,12 +32559,12 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 443,
+          "pullNumber": 442,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 8,
-          "startedAt": "2026-06-22T22:06:21.000+09:00",
-          "durationMs": 641656,
+          "fightId": 7,
+          "startedAt": "2026-06-22T21:56:51.000+09:00",
+          "durationMs": 519089,
           "phase": {
             "id": "p3",
             "label": "P3 エクスデス カオス",
@@ -32058,16 +32573,16 @@ window.FFLOGS_CALENDAR_DATA = {
             "confidence": 0.86
           },
           "phaseRank": 3,
-          "bossHpRemainingPercent": 37.77,
-          "progressPercent": 62.23,
+          "bossHpRemainingPercent": 64.5,
+          "progressPercent": 35.5,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=8",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=7",
           "bestPhaseRank": 3,
-          "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestBossHpRemainingPercent": 40.66,
+          "bestPullId": "x9R1mzNCcpdZ2KWf-19"
         },
         {
-          "pullNumber": 444,
+          "pullNumber": 443,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 8,
@@ -32087,33 +32602,33 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=8",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
-          "pullNumber": 445,
+          "pullNumber": 444,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 9,
-          "startedAt": "2026-06-22T22:20:27.000+09:00",
-          "durationMs": 100000,
+          "fightId": 8,
+          "startedAt": "2026-06-22T22:06:21.000+09:00",
+          "durationMs": 641656,
           "phase": {
-            "id": "p1",
-            "label": "P1 ケフカ",
-            "rank": 1,
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 1,
-          "bossHpRemainingPercent": 56.13,
-          "progressPercent": 43.87,
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 37.77,
+          "progressPercent": 62.23,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=9",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=8",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
-          "pullNumber": 446,
+          "pullNumber": 445,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 9,
@@ -32133,33 +32648,33 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=9",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
-          "pullNumber": 447,
+          "pullNumber": 446,
           "date": "2026-06-22",
           "reportCode": "9qcrNkfW8mVZBPap",
-          "fightId": 10,
-          "startedAt": "2026-06-22T22:22:30.000+09:00",
-          "durationMs": 313001,
+          "fightId": 9,
+          "startedAt": "2026-06-22T22:20:27.000+09:00",
+          "durationMs": 100000,
           "phase": {
-            "id": "p2",
-            "label": "P2 ゴッドケフカ",
-            "rank": 2,
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
             "source": "fflogs-lastPhase",
             "confidence": 0.86
           },
-          "phaseRank": 2,
-          "bossHpRemainingPercent": 48.44,
-          "progressPercent": 51.56,
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 56.13,
+          "progressPercent": 43.87,
           "kill": false,
-          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=10",
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=9",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
-          "pullNumber": 448,
+          "pullNumber": 447,
           "date": "2026-06-22",
           "reportCode": "gbZhCfqnPtazmY2x",
           "fightId": 10,
@@ -32179,7 +32694,30 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x#fight=10",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
+        },
+        {
+          "pullNumber": 448,
+          "date": "2026-06-22",
+          "reportCode": "9qcrNkfW8mVZBPap",
+          "fightId": 10,
+          "startedAt": "2026-06-22T22:22:30.000+09:00",
+          "durationMs": 313001,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 48.44,
+          "progressPercent": 51.56,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=10",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 37.77,
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 449,
@@ -32202,7 +32740,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=11",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 450,
@@ -32225,7 +32763,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=12",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 451,
@@ -32248,7 +32786,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=13",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 452,
@@ -32271,7 +32809,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=14",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 453,
@@ -32294,7 +32832,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=15",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 454,
@@ -32317,7 +32855,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=16",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 455,
@@ -32340,7 +32878,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=17",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 456,
@@ -32363,7 +32901,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=18",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 457,
@@ -32386,7 +32924,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=19",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 458,
@@ -32409,7 +32947,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=20",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 459,
@@ -32432,7 +32970,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=21",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 460,
@@ -32455,7 +32993,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap#fight=22",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 461,
@@ -32478,7 +33016,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=2",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 462,
@@ -32501,7 +33039,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=3",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 463,
@@ -32524,7 +33062,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=4",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 464,
@@ -32547,7 +33085,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=5",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 465,
@@ -32570,7 +33108,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=6",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 466,
@@ -32593,7 +33131,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=7",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 467,
@@ -32616,7 +33154,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=8",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 468,
@@ -32639,7 +33177,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=9",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 469,
@@ -32662,7 +33200,7 @@ window.FFLOGS_CALENDAR_DATA = {
           "fflogsUrl": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM#fight=10",
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 37.77,
-          "bestPullId": "9qcrNkfW8mVZBPap-8"
+          "bestPullId": "gbZhCfqnPtazmY2x-8"
         },
         {
           "pullNumber": 470,
@@ -34756,6 +35294,305 @@ window.FFLOGS_CALENDAR_DATA = {
           "bestPhaseRank": 3,
           "bestBossHpRemainingPercent": 5.47,
           "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 561,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 1,
+          "startedAt": "2026-07-02T22:01:52.000+09:00",
+          "durationMs": 717237,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 15.34,
+          "progressPercent": 84.66,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=1",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 562,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 2,
+          "startedAt": "2026-07-02T22:14:37.000+09:00",
+          "durationMs": 194632,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 18.78,
+          "progressPercent": 81.22,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=2",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 563,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 3,
+          "startedAt": "2026-07-02T22:18:19.000+09:00",
+          "durationMs": 332408,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 36.96,
+          "progressPercent": 63.04,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=3",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 564,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 4,
+          "startedAt": "2026-07-02T22:24:22.000+09:00",
+          "durationMs": 286085,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 54.58,
+          "progressPercent": 45.42,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=4",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 565,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 5,
+          "startedAt": "2026-07-02T22:29:29.000+09:00",
+          "durationMs": 739986,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 7.31,
+          "progressPercent": 92.69,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=5",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 566,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 6,
+          "startedAt": "2026-07-02T22:43:15.000+09:00",
+          "durationMs": 711348,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 13,
+          "progressPercent": 87,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=6",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 567,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 7,
+          "startedAt": "2026-07-02T22:57:04.000+09:00",
+          "durationMs": 575781,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 52.39,
+          "progressPercent": 47.61,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=7",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 5.47,
+          "bestPullId": "Yx4PfNRjFJvD6zTw-11"
+        },
+        {
+          "pullNumber": 568,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 8,
+          "startedAt": "2026-07-02T23:07:29.000+09:00",
+          "durationMs": 740330,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 3.51,
+          "progressPercent": 96.49,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=8",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 3.51,
+          "bestPullId": "afJh8BCcwTb3vK4Z-8"
+        },
+        {
+          "pullNumber": 569,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 9,
+          "startedAt": "2026-07-02T23:22:30.000+09:00",
+          "durationMs": 664380,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 18.27,
+          "progressPercent": 81.73,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=9",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 3.51,
+          "bestPullId": "afJh8BCcwTb3vK4Z-8"
+        },
+        {
+          "pullNumber": 570,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 10,
+          "startedAt": "2026-07-02T23:34:32.000+09:00",
+          "durationMs": 51638,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 75.13,
+          "progressPercent": 24.870000000000005,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=10",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 3.51,
+          "bestPullId": "afJh8BCcwTb3vK4Z-8"
+        },
+        {
+          "pullNumber": 571,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 11,
+          "startedAt": "2026-07-02T23:35:41.000+09:00",
+          "durationMs": 743994,
+          "phase": {
+            "id": "p3",
+            "label": "P3 エクスデス カオス",
+            "rank": 3,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 3,
+          "bossHpRemainingPercent": 0.01,
+          "progressPercent": 99.99,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=11",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 0.01,
+          "bestPullId": "afJh8BCcwTb3vK4Z-11"
+        },
+        {
+          "pullNumber": 572,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 12,
+          "startedAt": "2026-07-02T23:50:27.000+09:00",
+          "durationMs": 51358,
+          "phase": {
+            "id": "p1",
+            "label": "P1 ケフカ",
+            "rank": 1,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 1,
+          "bossHpRemainingPercent": 74.6,
+          "progressPercent": 25.400000000000006,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=12",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 0.01,
+          "bestPullId": "afJh8BCcwTb3vK4Z-11"
+        },
+        {
+          "pullNumber": 573,
+          "date": "2026-07-02",
+          "reportCode": "afJh8BCcwTb3vK4Z",
+          "fightId": 13,
+          "startedAt": "2026-07-02T23:51:35.000+09:00",
+          "durationMs": 391622,
+          "phase": {
+            "id": "p2",
+            "label": "P2 ゴッドケフカ",
+            "rank": 2,
+            "source": "fflogs-lastPhase",
+            "confidence": 0.86
+          },
+          "phaseRank": 2,
+          "bossHpRemainingPercent": 0.61,
+          "progressPercent": 99.39,
+          "kill": false,
+          "fflogsUrl": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z#fight=13",
+          "bestPhaseRank": 3,
+          "bestBossHpRemainingPercent": 0.01,
+          "bestPullId": "afJh8BCcwTb3vK4Z-11"
         }
       ]
     }

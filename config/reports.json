@@ -14,6 +14,24 @@
   },
   "reports": [
     {
+      "url": "https://www.fflogs.com/reports/afJh8BCcwTb3vK4Z",
+      "code": "afJh8BCcwTb3vK4Z",
+      "activityDate": "2026-07-02",
+      "note": "2026-07-02T13:00:52.311Z / 1 hours 57 minutes / unlisted",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/z6vDQWAqd2yFa1rL",
+      "code": "z6vDQWAqd2yFa1rL",
+      "activityDate": "",
+      "note": "June 14, 2026 12:29 AM / 3 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
       "url": "https://www.fflogs.com/reports/Yx4PfNRjFJvD6zTw",
       "code": "Yx4PfNRjFJvD6zTw",
       "activityDate": "",
@@ -23,64 +41,10 @@
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/R3CWf4QG8hmqL9BZ",
-      "code": "R3CWf4QG8hmqL9BZ",
+      "url": "https://www.fflogs.com/reports/XDxLPTMACngHZ3VR",
+      "code": "XDxLPTMACngHZ3VR",
       "activityDate": "",
-      "note": "July 1, 2026 12:30 AM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/tmQGrYfdJHavK3zj",
-      "code": "tmQGrYfdJHavK3zj",
-      "activityDate": "",
-      "note": "June 30, 2026 12:02 AM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/vFwDjWM73xT2rcam",
-      "code": "vFwDjWM73xT2rcam",
-      "activityDate": "",
-      "note": "June 29, 2026 12:06 AM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/aZct6KC27yNhkdgb",
-      "code": "aZct6KC27yNhkdgb",
-      "activityDate": "",
-      "note": "June 28, 2026 12:35 AM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM",
-      "code": "KfNkmwaHY6J4APyM",
-      "activityDate": "",
-      "note": "June 27, 2026 12:23 AM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap",
-      "code": "9qcrNkfW8mVZBPap",
-      "activityDate": "",
-      "note": "June 23, 2026 12:16 AM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x",
-      "code": "gbZhCfqnPtazmY2x",
-      "activityDate": "",
-      "note": "June 22, 2026 10:29 PM / an hour / Unlisted (Toggle)",
+      "note": "June 15, 2026 12:04 AM / 3 hours / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
@@ -95,10 +59,109 @@
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/3FKvrW7gwZND4zXt",
-      "code": "3FKvrW7gwZND4zXt",
+      "url": "https://www.fflogs.com/reports/W9Bavfytc6CAJZKm",
+      "code": "W9Bavfytc6CAJZKm",
       "activityDate": "",
-      "note": "June 21, 2026 12:26 AM / 3 hours / Unlisted (Toggle)",
+      "note": "June 9, 2026 1:27 AM / 3 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/vFwDjWM73xT2rcam",
+      "code": "vFwDjWM73xT2rcam",
+      "activityDate": "",
+      "note": "June 29, 2026 12:06 AM / 3 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/tmQGrYfdJHavK3zj",
+      "code": "tmQGrYfdJHavK3zj",
+      "activityDate": "",
+      "note": "June 30, 2026 12:02 AM / 3 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/R3CWf4QG8hmqL9BZ",
+      "code": "R3CWf4QG8hmqL9BZ",
+      "activityDate": "",
+      "note": "July 1, 2026 12:30 AM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/P29d1FxG4RQMycDB",
+      "code": "P29d1FxG4RQMycDB",
+      "activityDate": "",
+      "note": "June 5, 2026 1:22 AM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/kxTjNXYcabqMmn6C",
+      "code": "kxTjNXYcabqMmn6C",
+      "activityDate": "",
+      "note": "June 6, 2026 4:40 AM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/KfNkmwaHY6J4APyM",
+      "code": "KfNkmwaHY6J4APyM",
+      "activityDate": "",
+      "note": "June 27, 2026 12:23 AM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm",
+      "code": "k8fKngdPVWav6HZm",
+      "activityDate": "",
+      "note": "June 10, 2026 1:01 AM / 26 minutes / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG",
+      "code": "jfKTcn7pgh4WYBPG",
+      "activityDate": "",
+      "note": "June 11, 2026 1:50 AM / a day / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/hCfRvwxM8dj9a3rz",
+      "code": "hCfRvwxM8dj9a3rz",
+      "activityDate": "",
+      "note": "June 14, 2026 11:31 PM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/gwhXfxGKvVc1TjHk",
+      "code": "gwhXfxGKvVc1TjHk",
+      "activityDate": "",
+      "note": "June 16, 2026 12:32 AM / 2 hours / Unlisted (Toggle)",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
+      "url": "https://www.fflogs.com/reports/gbZhCfqnPtazmY2x",
+      "code": "gbZhCfqnPtazmY2x",
+      "activityDate": "",
+      "note": "June 22, 2026 10:29 PM / an hour / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
@@ -122,51 +185,6 @@
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/gwhXfxGKvVc1TjHk",
-      "code": "gwhXfxGKvVc1TjHk",
-      "activityDate": "",
-      "note": "June 16, 2026 12:32 AM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/XDxLPTMACngHZ3VR",
-      "code": "XDxLPTMACngHZ3VR",
-      "activityDate": "",
-      "note": "June 15, 2026 12:04 AM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/hCfRvwxM8dj9a3rz",
-      "code": "hCfRvwxM8dj9a3rz",
-      "activityDate": "",
-      "note": "June 14, 2026 11:31 PM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/z6vDQWAqd2yFa1rL",
-      "code": "z6vDQWAqd2yFa1rL",
-      "activityDate": "",
-      "note": "June 14, 2026 12:29 AM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/28rwQ6YvbLGf9BVA",
-      "code": "28rwQ6YvbLGf9BVA",
-      "activityDate": "",
-      "note": "June 13, 2026 4:54 PM / 3 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
       "url": "https://www.fflogs.com/reports/BdLNvrnFHzQqc6Ym",
       "code": "BdLNvrnFHzQqc6Ym",
       "activityDate": "",
@@ -176,46 +194,37 @@
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/jfKTcn7pgh4WYBPG",
-      "code": "jfKTcn7pgh4WYBPG",
+      "url": "https://www.fflogs.com/reports/aZct6KC27yNhkdgb",
+      "code": "aZct6KC27yNhkdgb",
       "activityDate": "",
-      "note": "June 11, 2026 1:50 AM / a day / Unlisted (Toggle)",
+      "note": "June 28, 2026 12:35 AM / 2 hours / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/k8fKngdPVWav6HZm",
-      "code": "k8fKngdPVWav6HZm",
+      "url": "https://www.fflogs.com/reports/9qcrNkfW8mVZBPap",
+      "code": "9qcrNkfW8mVZBPap",
       "activityDate": "",
-      "note": "June 10, 2026 1:01 AM / 26 minutes / Unlisted (Toggle)",
+      "note": "June 23, 2026 12:16 AM / 3 hours / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/W9Bavfytc6CAJZKm",
-      "code": "W9Bavfytc6CAJZKm",
+      "url": "https://www.fflogs.com/reports/3FKvrW7gwZND4zXt",
+      "code": "3FKvrW7gwZND4zXt",
       "activityDate": "",
-      "note": "June 9, 2026 1:27 AM / 3 hours / Unlisted (Toggle)",
+      "note": "June 21, 2026 12:26 AM / 3 hours / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
     },
     {
-      "url": "https://www.fflogs.com/reports/kxTjNXYcabqMmn6C",
-      "code": "kxTjNXYcabqMmn6C",
+      "url": "https://www.fflogs.com/reports/28rwQ6YvbLGf9BVA",
+      "code": "28rwQ6YvbLGf9BVA",
       "activityDate": "",
-      "note": "June 6, 2026 4:40 AM / 2 hours / Unlisted (Toggle)",
-      "includeFightIds": [],
-      "excludeFightIds": [],
-      "encounterIds": []
-    },
-    {
-      "url": "https://www.fflogs.com/reports/P29d1FxG4RQMycDB",
-      "code": "P29d1FxG4RQMycDB",
-      "activityDate": "",
-      "note": "June 5, 2026 1:22 AM / 2 hours / Unlisted (Toggle)",
+      "note": "June 13, 2026 4:54 PM / 3 hours / Unlisted (Toggle)",
       "includeFightIds": [],
       "excludeFightIds": [],
       "encounterIds": []
