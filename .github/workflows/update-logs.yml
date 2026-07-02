@@ -1,0 +1,52 @@
+name: Update FFLogs calendar data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-fflogs-calendar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Sync Personal Logs
+        env:
+          FFLOGS_CLIENT_ID: ${{ secrets.FFLOGS_CLIENT_ID }}
+          FFLOGS_CLIENT_SECRET: ${{ secrets.FFLOGS_CLIENT_SECRET }}
+          FFLOGS_REFRESH_TOKEN: ${{ secrets.FFLOGS_REFRESH_TOKEN }}
+        run: npm run sync-personal-api
+
+      - name: Fetch FFLogs data
+        env:
+          FFLOGS_CLIENT_ID: ${{ secrets.FFLOGS_CLIENT_ID }}
+          FFLOGS_CLIENT_SECRET: ${{ secrets.FFLOGS_CLIENT_SECRET }}
+        run: npm run fetch
+
+      - name: Validate generated data
+        run: npm run validate
+
+      - name: Commit generated data
+        run: |
+          git config user.name "fflogs-calendar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/reports.json data/calendar-data.json data/calendar-data.js
+          if git diff --cached --quiet; then
+            echo "No generated data changes."
+          else
+            git commit -m "Update FFLogs calendar data"
+            git push
+          fi

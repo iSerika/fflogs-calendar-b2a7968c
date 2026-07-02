@@ -1,0 +1,6 @@
+﻿.env
+data/user-token.json
+data/cache/
+.dev.vars*
+node_modules/
+

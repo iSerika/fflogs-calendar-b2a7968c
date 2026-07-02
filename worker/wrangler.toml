@@ -1,0 +1,13 @@
+name = "fflogs-calendar-admin"
+main = "src/index.js"
+compatibility_date = "2026-07-03"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "https://iserika.github.io"
+PAGES_URL = "https://iserika.github.io/fflogs-calendar-b2a7968c/"
+ADMIN_GITHUB_LOGIN = "iSerika"
+GITHUB_OWNER = "iSerika"
+GITHUB_REPO = "fflogs-calendar-b2a7968c"
+GITHUB_WORKFLOW_ID = "update-logs.yml"
+

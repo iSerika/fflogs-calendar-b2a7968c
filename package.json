@@ -1,0 +1,15 @@
+{
+  "name": "fflogs-static-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/server.mjs",
+    "fetch": "node scripts/fetch-fflogs.mjs fetch",
+    "sync-personal-api": "node scripts/sync-personal-api.mjs",
+    "import-browser-reports": "node scripts/import-browser-reports.mjs",
+    "sync-personal": "node scripts/sync-personal-reports.mjs",
+    "sync-guild": "node scripts/fetch-fflogs.mjs sync-guild",
+    "validate": "node scripts/validate-data.mjs"
+  }
+}

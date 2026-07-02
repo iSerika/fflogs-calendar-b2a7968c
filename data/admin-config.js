@@ -1,0 +1,1 @@
+window.FFLOGS_ADMIN_API_BASE = "";

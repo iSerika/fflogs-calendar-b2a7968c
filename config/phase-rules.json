@@ -1,0 +1,103 @@
+{
+  "timezone": "Asia/Tokyo",
+  "progressMode": "bossHpRemaining",
+  "phases": [
+    {
+      "id": "p1",
+      "label": "P1 ケフカ",
+      "rank": 1,
+      "minElapsedMs": 0,
+      "minProgressPercent": 0,
+      "keywords": [
+        "Kefka",
+        "ケフカ"
+      ]
+    },
+    {
+      "id": "p2",
+      "label": "P2 ゴッドケフカ",
+      "rank": 2,
+      "minElapsedMs": 180000,
+      "minProgressPercent": 20,
+      "keywords": [
+        "God Kefka",
+        "ゴッドケフカ",
+        "終末",
+        "ミッシング"
+      ]
+    },
+    {
+      "id": "p3",
+      "label": "P3 エクスデス カオス",
+      "rank": 3,
+      "minElapsedMs": 390000,
+      "minProgressPercent": 45,
+      "keywords": [
+        "Exdeath",
+        "エクスデス",
+        "決戦",
+        "アルテマ"
+      ]
+    },
+    {
+      "id": "p4",
+      "label": "P4 ネオエクスデス カオス",
+      "rank": 4,
+      "minElapsedMs": 600000,
+      "minProgressPercent": 68,
+      "keywords": [
+        "Neo Exdeath",
+        "ネオエクスデス"
+      ]
+    },
+    {
+      "id": "p5",
+      "label": "P5 最終フェーズ",
+      "rank": 5,
+      "minElapsedMs": 780000,
+      "minProgressPercent": 86,
+      "keywords": [
+        "final",
+        "最終"
+      ]
+    },
+    {
+      "id": "clear",
+      "label": "クリア",
+      "rank": 6,
+      "minElapsedMs": 0,
+      "minProgressPercent": 100,
+      "keywords": []
+    }
+  ],
+  "wipeCauseCategories": [
+    {
+      "id": "damage_down",
+      "label": "与ダメージ低下あり"
+    },
+    {
+      "id": "first_death",
+      "label": "初回死亡起点"
+    },
+    {
+      "id": "mass_deaths",
+      "label": "同時多発死亡"
+    },
+    {
+      "id": "late_wipe",
+      "label": "終盤崩れ"
+    },
+    {
+      "id": "enrage_or_timeout",
+      "label": "時間切れ/ログ終端"
+    },
+    {
+      "id": "manual",
+      "label": "手動分類"
+    },
+    {
+      "id": "unknown",
+      "label": "未分類"
+    }
+  ]
+}

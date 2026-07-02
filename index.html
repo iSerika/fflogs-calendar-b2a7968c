@@ -7,6 +7,7 @@
     <meta name="referrer" content="no-referrer" />
     <title>FFLogs固定活動カレンダー</title>
     <script src="./data/calendar-data.js"></script>
+    <script src="./data/admin-config.js"></script>
     <style>
       :root {
         color-scheme: dark;
@@ -800,6 +801,8 @@
       let currentMonth = selectedDate ? selectedDate.slice(0, 7) : toMonthKey(new Date());
       let activeView = "calendar";
       const localServerBacked = isLocalServerBacked();
+      const adminApiBase = String(window.FFLOGS_ADMIN_API_BASE || "").replace(/\/$/, "");
+      let adminSession = { authenticated: false, admin: false, login: "" };
 
       const elements = {
         title: document.getElementById("title"),
@@ -843,8 +846,12 @@
       document.getElementById("importOverridesInput").addEventListener("change", importOverrides);
       document.getElementById("regenerateButton").addEventListener("click", regenerateFromFflogs);
       document.getElementById("authButton").addEventListener("click", () => {
+        if (!localServerBacked && adminApiBase) {
+          location.href = `${adminApiBase}/auth/github/start`;
+          return;
+        }
         if (!localServerBacked) {
-          alert("FFLogs認可はローカルサーバー起動時に使えます。READMEの npm run serve を使ってください。");
+          alert("管理APIが未設定です。固定リーダー用のCloudflare Worker設定を確認してください。");
           return;
         }
         location.href = "./auth/start";
@@ -853,21 +860,34 @@
       bootstrap();
 
       async function bootstrap() {
+        await loadAdminSession();
         applyHostingMode();
         await loadServerOverrides();
         render();
+      }
+
+      async function loadAdminSession() {
+        if (localServerBacked || !adminApiBase) return;
+        try {
+          const response = await fetch(`${adminApiBase}/session`, { credentials: "include" });
+          if (response.ok) adminSession = await response.json();
+        } catch {
+          adminSession = { authenticated: false, admin: false, login: "" };
+        }
       }
 
       function applyHostingMode() {
         if (!localServerBacked) {
           const authButton = document.getElementById("authButton");
           const regenerateButton = document.getElementById("regenerateButton");
-          authButton.disabled = true;
-          regenerateButton.disabled = true;
-          authButton.textContent = "FFLogs認可（管理者PC専用）";
-          regenerateButton.textContent = "ログ取り込み（管理者PC専用）";
-          authButton.title = "公開ページでは実行できません。固定リーダーのローカル管理画面でのみFFLogsログイン認可を実行できます。";
-          regenerateButton.title = "公開ページでは実行できません。固定リーダーのローカル管理画面でのみFFLogs APIからログを取り込み/再取得できます。";
+          authButton.disabled = !adminApiBase;
+          authButton.textContent = adminSession.admin ? `管理者ログイン中: ${adminSession.login}` : "GitHubで管理者ログイン";
+          authButton.title = adminSession.admin ? "固定リーダーとしてログイン済みです。" : "GitHubで固定リーダー本人確認を行います。";
+          regenerateButton.disabled = !adminSession.admin;
+          regenerateButton.textContent = adminSession.admin ? "最新ログを取り込み/再取得" : "ログ取り込み（管理者ログイン後）";
+          regenerateButton.title = adminSession.admin
+            ? "FFLogs Personal Logsを同期し、GitHub Pagesの表示データを更新します。"
+            : "固定リーダーのGitHubログイン後に実行できます。";
         }
       }
 
@@ -1537,7 +1557,7 @@
 
       async function regenerateFromFflogs() {
         if (!localServerBacked) {
-          alert("FFLogs再取得はローカルサーバー起動時に使えます。READMEの npm run serve を使ってください。");
+          await regenerateFromAdminApi();
           return;
         }
         const button = document.getElementById("regenerateButton");
@@ -1553,6 +1573,60 @@
           button.disabled = false;
           button.textContent = "ログを取り込み/再取得";
         }
+      }
+
+      async function regenerateFromAdminApi() {
+        const button = document.getElementById("regenerateButton");
+        if (!adminApiBase) {
+          alert("管理APIが未設定です。固定リーダー用のCloudflare Worker設定を確認してください。");
+          return;
+        }
+        if (!adminSession.admin) {
+          alert("先にGitHubで管理者ログインしてください。");
+          return;
+        }
+        button.disabled = true;
+        button.textContent = "更新を開始中...";
+        try {
+          const response = await fetch(`${adminApiBase}/update`, {
+            method: "POST",
+            credentials: "include",
+          });
+          if (!response.ok) throw new Error(await response.text());
+          await pollAdminUpdateStatus(button);
+        } catch (error) {
+          alert(`ログ更新の開始に失敗しました: ${error.message}`);
+          button.disabled = false;
+          button.textContent = "最新ログを取り込み/再取得";
+        }
+      }
+
+      async function pollAdminUpdateStatus(button) {
+        const startedAt = Date.now();
+        for (let attempt = 1; attempt <= 90; attempt += 1) {
+          const response = await fetch(`${adminApiBase}/update/status`, { credentials: "include" });
+          if (!response.ok) throw new Error(await response.text());
+          const payload = await response.json();
+          const run = payload.run;
+          if (run?.status) {
+            button.textContent = run.status === "completed" ? "反映確認中..." : `更新中... ${run.status}`;
+            if (run.status === "completed") {
+              if (run.conclusion === "success") {
+                setTimeout(() => location.reload(), 4000);
+                return;
+              }
+              throw new Error(`GitHub Actionsが失敗しました: ${run.conclusion || "unknown"}`);
+            }
+          } else {
+            button.textContent = "更新ワークフロー待機中...";
+          }
+          if (Date.now() - startedAt > 15 * 60 * 1000) throw new Error("更新の完了待ちがタイムアウトしました。");
+          await sleep(10000);
+        }
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
       }
 
       function pickInitialDate() {
