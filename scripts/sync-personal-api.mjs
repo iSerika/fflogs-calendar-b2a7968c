@@ -87,10 +87,29 @@ async function getUserAccessToken(env) {
     },
     body,
   });
-  if (!response.ok) throw new Error(`FFLogs refresh failed: ${response.status} ${await response.text()}`);
+  if (!response.ok) {
+    const message = await response.text();
+    if (/revoked|invalid_grant|invalid_request|refresh token is invalid/i.test(message)) {
+      throw new Error(
+        `FFLogs refresh token is invalid or revoked. Re-authorize FFLogs and update the GitHub Actions secret FFLOGS_REFRESH_TOKEN. Raw response: ${response.status} ${message}`,
+      );
+    }
+    throw new Error(`FFLogs refresh failed: ${response.status} ${message}`);
+  }
   const payload = await response.json();
   if (!payload.access_token) throw new Error("FFLogs refresh did not return access_token.");
+  await persistRotatedRefreshToken(payload.refresh_token, refreshToken);
   return payload.access_token;
+}
+
+async function persistRotatedRefreshToken(nextRefreshToken, previousRefreshToken) {
+  if (!nextRefreshToken || nextRefreshToken === previousRefreshToken) return;
+  const outputFile = process.env.FFLOGS_REFRESH_TOKEN_OUTPUT_FILE;
+  if (process.env.GITHUB_OUTPUT) {
+    await fs.appendFile(process.env.GITHUB_OUTPUT, "fflogs_refresh_token_rotated=true\n", "utf8");
+  }
+  if (!outputFile) return;
+  await fs.writeFile(outputFile, nextRefreshToken, { encoding: "utf8", mode: 0o600 });
 }
 
 function getStartTime(config) {

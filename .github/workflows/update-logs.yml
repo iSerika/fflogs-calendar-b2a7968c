@@ -24,11 +24,30 @@ jobs:
           node-version: 24
 
       - name: Sync Personal Logs
+        id: sync-personal
         env:
           FFLOGS_CLIENT_ID: ${{ secrets.FFLOGS_CLIENT_ID }}
           FFLOGS_CLIENT_SECRET: ${{ secrets.FFLOGS_CLIENT_SECRET }}
           FFLOGS_REFRESH_TOKEN: ${{ secrets.FFLOGS_REFRESH_TOKEN }}
+          FFLOGS_REFRESH_TOKEN_OUTPUT_FILE: .fflogs-refresh-token
         run: npm run sync-personal-api
+
+      - name: Store rotated FFLogs refresh token
+        if: steps.sync-personal.outputs.fflogs_refresh_token_rotated == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRET_SYNC_TOKEN }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "GH_SECRET_SYNC_TOKEN is required to persist rotated FFLogs refresh tokens." >&2
+            exit 1
+          fi
+          if [ ! -s .fflogs-refresh-token ]; then
+            echo "FFLogs refresh token rotation was reported but the token file is missing." >&2
+            exit 1
+          fi
+          echo "::add-mask::$(cat .fflogs-refresh-token)"
+          gh secret set FFLOGS_REFRESH_TOKEN --repo "${GITHUB_REPOSITORY}" < .fflogs-refresh-token
+          rm -f .fflogs-refresh-token
 
       - name: Fetch FFLogs data
         env:
