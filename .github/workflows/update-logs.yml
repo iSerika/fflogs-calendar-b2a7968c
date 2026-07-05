@@ -46,8 +46,17 @@ jobs:
             exit 1
           fi
           echo "::add-mask::$(cat .fflogs-refresh-token)"
-          gh secret set FFLOGS_REFRESH_TOKEN --repo "${GITHUB_REPOSITORY}" < .fflogs-refresh-token
+          for attempt in 1 2 3; do
+            if gh secret set FFLOGS_REFRESH_TOKEN --repo "${GITHUB_REPOSITORY}" < .fflogs-refresh-token; then
+              rm -f .fflogs-refresh-token
+              exit 0
+            fi
+            echo "Secret update failed on attempt ${attempt}; retrying..." >&2
+            sleep $((attempt * 5))
+          done
+          echo "Failed to persist rotated FFLogs refresh token after retries." >&2
           rm -f .fflogs-refresh-token
+          exit 1
 
       - name: Fetch FFLogs data
         env:
