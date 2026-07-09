@@ -1,6 +1,6 @@
 window.FFLOGS_CALENDAR_DATA = {
   "version": 1,
-  "generatedAt": "2026-07-09T09:09:15.000+09:00",
+  "generatedAt": "2026-07-09T09:12:01.000+09:00",
   "source": {
     "mode": "fflogs-api",
     "timezone": "Asia/Tokyo",
