@@ -6,7 +6,9 @@
     <meta name="robots" content="noindex,nofollow,noarchive,noimageindex" />
     <meta name="referrer" content="no-referrer" />
     <title>FFLogs固定活動カレンダー</title>
-    <script src="./data/calendar-data.js"></script>
+    <script>
+      document.write(`<script src="./data/calendar-data.js?v=${Date.now()}"><\/script>`);
+    </script>
     <script src="./data/admin-config.js"></script>
     <style>
       :root {
