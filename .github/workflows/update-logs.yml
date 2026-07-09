@@ -76,7 +76,17 @@ jobs:
             echo "No generated data changes."
           else
             git commit -m "Update FFLogs calendar data"
-            git push
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+              echo "Push rejected on attempt ${attempt}; rebasing onto origin/master..." >&2
+              git fetch origin master
+              git rebase origin/master
+              sleep $((attempt * 5))
+            done
+            echo "Failed to push generated data after retries." >&2
+            exit 1
           fi
 
       - name: Publish static site branch

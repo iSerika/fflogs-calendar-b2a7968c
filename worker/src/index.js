@@ -103,6 +103,10 @@ async function handleGithubCallback(request, env) {
 async function handleUpdate(request, env) {
   assertConfigured(env, ["GITHUB_DISPATCH_TOKEN"]);
   const session = await requireAdmin(request, env);
+  const activeRun = await getActiveWorkflowRun(env);
+  if (activeRun) {
+    return json({ ok: true, alreadyRunning: true, login: session.login, run: activeRun });
+  }
   const dispatchResponse = await githubFetch(env, `/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/actions/workflows/${env.GITHUB_WORKFLOW_ID}/dispatches`, {
     method: "POST",
     body: JSON.stringify({ ref: "master" }),
@@ -111,6 +115,26 @@ async function handleUpdate(request, env) {
     throw new Error(`workflow_dispatch failed: ${dispatchResponse.status} ${await dispatchResponse.text()}`);
   }
   return json({ ok: true, login: session.login });
+}
+
+async function getActiveWorkflowRun(env) {
+  const response = await githubFetch(
+    env,
+    `/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/actions/workflows/${env.GITHUB_WORKFLOW_ID}/runs?branch=master&per_page=10`,
+  );
+  if (!response.ok) throw new Error(`workflow status failed: ${response.status} ${await response.text()}`);
+  const payload = await response.json();
+  const run = (payload.workflow_runs || []).find((candidate) => ["queued", "in_progress", "waiting", "requested"].includes(candidate.status));
+  return run
+    ? {
+        id: run.id,
+        status: run.status,
+        conclusion: run.conclusion,
+        htmlUrl: run.html_url,
+        createdAt: run.created_at,
+        updatedAt: run.updated_at,
+      }
+    : null;
 }
 
 async function handleUpdateStatus(request, env) {
