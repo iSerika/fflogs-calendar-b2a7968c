@@ -14,6 +14,15 @@
   },
   "reports": [
     {
+      "url": "https://www.fflogs.com/reports/dJZD2wgRaK9G4Xcx",
+      "code": "dJZD2wgRaK9G4Xcx",
+      "activityDate": "2026-07-10",
+      "note": "2026-07-10T13:01:38.774Z / 2 hours 10 minutes / unlisted",
+      "includeFightIds": [],
+      "excludeFightIds": [],
+      "encounterIds": []
+    },
+    {
       "url": "https://www.fflogs.com/reports/fJvHqxTjgyQKCDk9",
       "code": "fJvHqxTjgyQKCDk9",
       "activityDate": "2026-07-08",
