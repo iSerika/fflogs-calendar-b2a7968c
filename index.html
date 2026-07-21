@@ -199,6 +199,29 @@
         font-size: 24px;
       }
 
+      .phase-wipe-rates {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 8px;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .metric .phase-wipe-rate {
+        display: inline-flex;
+        gap: 3px;
+        color: inherit;
+        font-size: inherit;
+        white-space: nowrap;
+      }
+
+      .phase-wipe-rate b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
       .main-grid {
         grid-template-columns: minmax(760px, 1fr) 430px;
         align-items: start;
@@ -921,10 +944,11 @@
         }, null);
         const bestDay = days.reduce((best, day) => (isDayDeeper(day, best) ? day : best), null);
         const activeMs = analytics.totalActiveFightDurationMs || sum(days.map((day) => day.activeFightDurationMs || 0));
+        const totalPulls = analytics.totalPulls || sum(days.map((day) => day.pullCount || 0));
 
         elements.summaryGrid.innerHTML = [
           metric("活動日", `${analytics.totalDays || days.length}日`),
-          metric("総トライ", `${analytics.totalPulls || sum(days.map((day) => day.pullCount || 0))}回`),
+          metric("総トライ", `${totalPulls}回`, renderPhaseWipeRates(days, totalPulls)),
           metric("最深フェーズ", deepest?.label || "-"),
           metric("ベスト残HP", formatBestPull(bestDay?.bestPull || null)),
           metric("総実戦時間", formatDuration(activeMs)),
@@ -1714,12 +1738,41 @@
         return match ? match[0].toUpperCase() : phase.label || phase.id || "-";
       }
 
+      function renderPhaseWipeRates(days, totalPulls) {
+        const phases = ["P1", "P2", "P3", "P4", "P5"];
+        const wipeCounts = new Map(phases.map((phase) => [phase.toLowerCase(), 0]));
+
+        for (const day of days) {
+          for (const pull of day.pulls || []) {
+            if (pull.kill === true || pull.kill === "true") continue;
+            const phaseId = String(pull.phase?.id || (pull.phase?.rank ? `p${pull.phase.rank}` : "")).toLowerCase();
+            if (wipeCounts.has(phaseId)) wipeCounts.set(phaseId, wipeCounts.get(phaseId) + 1);
+          }
+        }
+
+        const rows = phases.map((phase) => {
+          const count = wipeCounts.get(phase.toLowerCase()) || 0;
+          const percent = totalPulls > 0 ? (count / totalPulls) * 100 : 0;
+          return { phase, count, percent };
+        });
+        const summary = rows.map((row) => `${row.phase} ${row.percent.toFixed(1)}%`).join("、");
+
+        return `<div class="phase-wipe-rates" aria-label="フェーズ別ワイプ割合: ${escapeAttr(summary)}">
+          ${rows
+            .map(
+              (row) =>
+                `<span class="phase-wipe-rate" title="${escapeAttr(`${row.phase}: ${row.count}回 / 総トライ${totalPulls}回`)}"><b>${row.phase}</b>${row.percent.toFixed(1)}%</span>`,
+            )
+            .join("")}
+        </div>`;
+      }
+
       function clamp(value, min, max) {
         return Math.max(min, Math.min(max, value));
       }
 
-      function metric(label, value) {
-        return `<div class="metric"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`;
+      function metric(label, value, details = "") {
+        return `<div class="metric"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${details}</div>`;
       }
 
       function mini(label, value) {
